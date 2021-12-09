@@ -25,6 +25,36 @@ class ComplianceOverview extends StatelessWidget {
                 },
                 child: const Text("Brandschutz"),
             ),
+            ElevatedButton(
+              onPressed: () {
+                Navigator.push(
+                  context,
+                  MaterialPageRoute(
+                      builder: (context) => const GamesChoice()),
+                );
+              },
+              child: const Text("Arbeitssicherheit"),
+            ),
+            ElevatedButton(
+              onPressed: () {
+                Navigator.push(
+                  context,
+                  MaterialPageRoute(
+                      builder: (context) => const GamesChoice()),
+                );
+              },
+              child: const Text("Gesundheitsschutz"),
+            ),
+            ElevatedButton(
+              onPressed: () {
+                Navigator.push(
+                  context,
+                  MaterialPageRoute(
+                      builder: (context) => const GamesChoice()),
+                );
+              },
+              child: const Text("Service- und Sozialangebote"),
+            ),
           ],
     ),
     ),
