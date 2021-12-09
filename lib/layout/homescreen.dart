@@ -1,3 +1,4 @@
+import 'package:project_moc/layout/Compliance%20Schulungen.dart';
 import 'package:project_moc/layout/profil.dart';
 import 'package:project_moc/layout/settings.dart';
 import 'package:project_moc/layout/widget.dart';
@@ -39,7 +40,7 @@ class HomeScreen extends StatelessWidget {
               onPressed: () {
                 Navigator.push(
                   context,
-                  MaterialPageRoute(builder: (context) => const GamesChoice()),
+                  MaterialPageRoute(builder: (context) => const ComplianceOverview()),
                 );
               },
               child: const Text("Compliance Schulung"),
