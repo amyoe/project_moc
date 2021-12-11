@@ -1,8 +1,12 @@
+import 'package:project_moc/logic/question_controller.dart';
 import 'package:project_moc/logic/questions.dart';
 import 'package:project_moc/layout/widget.dart';
 import 'package:flutter/material.dart';
 import 'package:project_moc/layout/profil.dart';
 import 'package:project_moc/model/quizmodel.dart';
+import 'package:step_progress_indicator/step_progress_indicator.dart';
+
+import 'endscreen_quizduell.dart';
 
 class QuizDuell extends StatefulWidget{
   const QuizDuell({Key? key}) : super(key: key);
@@ -14,11 +18,48 @@ class QuizDuell extends StatefulWidget{
 
 class _QuizDuellSate extends State<QuizDuell> {
 
+  //late verwenden, da ich es nicht jetzt initalisiere, sondern später
+  int currentLevel = 1;
+  int userPoints = 0;
   late QuizModel currentQuestion;
+  late List<String> answers;
+  late List<int> questionIndex;
+  List<bool?> answerValidation = [null, null, null, null];
+
   @override
   void initState() {
-    currentQuestion = loadQuestion(1);
     super.initState();
+    questionIndex = getQuestionIndexRandom(10);
+    loadNewQuestion();
+  }
+
+  loadNewQuestion() {
+    setState(() {
+      currentQuestion = loadQuestion(questionIndex[currentLevel - 1]);
+      answers = getQuestionRandomList(currentQuestion.wrongAnswers, currentQuestion.correctAnswer);
+      answerValidation = [null, null, null, null];
+    });
+  }
+
+  validateAndShowAnswers(int userAnswerIndex) async {
+    setState(() {
+      int correctIndex = getCorrectAnswerIndex(answers, currentQuestion.correctAnswer);
+      answerValidation[correctIndex] = true;
+      if(userAnswerIndex == correctIndex ){
+        userPoints++;
+      } else {
+        answerValidation[userAnswerIndex] = false;
+      }
+    });
+    
+    await Future.delayed(Duration(seconds: 2));
+    currentLevel++;
+    if (currentLevel<=10) {
+      loadNewQuestion();
+    } else{
+        Navigator.push(context,
+                      MaterialPageRoute(builder: (context) => EndScreen(userPoints: this.userPoints,)));
+    }
   }
 
   @override
@@ -32,10 +73,40 @@ class _QuizDuellSate extends State<QuizDuell> {
             child: Column(
               mainAxisAlignment: MainAxisAlignment.center,
               children: [
+                Spacer(),
+                StepProgressIndicator(
+                  totalSteps: 10,
+                  currentStep: currentLevel,
+                  selectedColor: Colors.green,
+                  unselectedColor: Colors.red,
+                ),
+                Spacer(),
                 Text(
                   currentQuestion.question,
                 ),
-                answerCard(loadQuestion(1).correctAnswer),
+                Spacer(),
+                Text("Punkte: "+ userPoints.toString()),
+                GestureDetector(
+                  child:answerCard(answers[0], answer: answerValidation[0]),
+                  onTap:(){
+                  validateAndShowAnswers(0);
+                },),
+                GestureDetector(
+                  child:answerCard(answers[1], answer: answerValidation[1]),
+                  onTap:(){
+                  validateAndShowAnswers(1);
+                },),
+                GestureDetector(
+                  child:answerCard(answers[2], answer: answerValidation[2]),
+                  onTap:(){
+                  validateAndShowAnswers(2);
+                },),
+                GestureDetector(
+                  child:answerCard(answers[3], answer: answerValidation[3]),
+                  onTap:(){
+                  validateAndShowAnswers(3);
+                },),
+                Spacer(),
               ],
             ),
           ),

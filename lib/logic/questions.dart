@@ -36,5 +36,5 @@ QuizModel loadQuestion(int questionIndex){
         "YouTube ist eine ... ", "Plattform", ["Suchmaschine","Schule","Online Shop"]),
 
   ];
-  return questionList[questionIndex - 1];
+  return questionList[questionIndex];
 }

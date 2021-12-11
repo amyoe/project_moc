@@ -1,6 +1,6 @@
 import 'package:project_moc/layout/widget.dart';
 import 'package:flutter/material.dart';
-import 'package:project_moc/layout/game';
+import 'package:project_moc/layout/games.dart';
 
 class BrandschutzMenu extends StatefulWidget {
   const BrandschutzMenu({Key? key}) : super(key: key);

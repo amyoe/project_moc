@@ -12,11 +12,16 @@ PreferredSizeWidget customAppBar(String title) {
 }
 
 // Global ausgelagert die Antwortkarten
-Widget answerCard(String text){
+Widget answerCard(String text, {bool? answer}) {
   return Container(
     height: 60,
     width: 150,
     child: Card(
+      color: (answer == null)
+          ? Colors.grey
+      :(answer)
+          ? Colors.green
+          : Colors.red,
       child: Padding(
         padding: const EdgeInsets.all(10.0),
         child: Text(text),
