@@ -1,6 +1,6 @@
 // Funktion für die Fragen
 // Das Model besteht aus Frage, richtiger Antwort und falscher Antwort
-//So muss das auch hier dem Model übergeben werden
+// So muss das auch hier dem Model übergeben werden
 
 import 'package:project_moc/model/quizmodel.dart';
 

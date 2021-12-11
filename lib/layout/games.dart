@@ -1,3 +1,4 @@
+import 'package:project_moc/layout/WelcomeMemorie.dart';
 import 'package:project_moc/layout/quizduell.dart';
 import 'package:project_moc/layout/widget.dart';
 import 'package:flutter/material.dart';
@@ -31,9 +32,13 @@ class _GamesChoiceSate extends State<GamesChoice> {
                   },
                   child: Text("QuizDuell"),
                 ),
-                const ElevatedButton(
-                  onPressed: null,
-                  child: Text("Memorie"),
+                 ElevatedButton(
+                  onPressed: (){
+                    Navigator.push(context,
+                    MaterialPageRoute(builder: (context) => WelcomeMemorie()),
+                    );
+                  },
+                  child: Text("Kollegen-Memorie"),
                 ),
                 const ElevatedButton(
                   onPressed: null,
