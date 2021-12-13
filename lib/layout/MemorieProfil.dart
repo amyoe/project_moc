@@ -1,3 +1,5 @@
+// Franziska Petzold
+
 import 'package:flutter/material.dart';
 import 'package:project_moc/layout/widget.dart';
 
@@ -11,7 +13,8 @@ class MemorieProfil extends StatefulWidget {
 class _MemorieProfilState extends State<MemorieProfil> {
   @override
   Widget build(BuildContext context) {
-    return Scaffold(appBar: customAppBar("Memorie-Profil"),
+    return Scaffold(
+      appBar: customAppBar("Memorie-Profil"),
     );
   }
 }
