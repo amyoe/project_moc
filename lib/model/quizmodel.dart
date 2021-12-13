@@ -1,4 +1,4 @@
-// Klasse wo die Fragen angezeigt werden
+// Klasse, in der die Fragen angezeigt werden
 class QuizModel {
   String question;
   String correctAnswer;
