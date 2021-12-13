@@ -1,3 +1,4 @@
+import 'package:google_fonts/google_fonts.dart';
 import 'package:project_moc/logic/question_controller.dart';
 import 'package:project_moc/logic/questions.dart';
 import 'package:project_moc/layout/widget.dart';
@@ -5,7 +6,6 @@ import 'package:flutter/material.dart';
 import 'package:project_moc/layout/profil.dart';
 import 'package:project_moc/model/quizmodel.dart';
 import 'package:step_progress_indicator/step_progress_indicator.dart';
-
 import 'endscreen_quizduell.dart';
 
 class QuizDuell extends StatefulWidget{
@@ -14,7 +14,6 @@ class QuizDuell extends StatefulWidget{
   @override
   State<QuizDuell> createState() => _QuizDuellSate();
 }
-
 
 class _QuizDuellSate extends State<QuizDuell> {
 
@@ -83,9 +82,17 @@ class _QuizDuellSate extends State<QuizDuell> {
                 Spacer(),
                 Text(
                   currentQuestion.question,
+                    style: GoogleFonts.lato(textStyle: TextStyle(color: Colors.black),
+                        fontSize: 30),
+                  textAlign: TextAlign.center,
                 ),
                 Spacer(),
-                Text("Punkte: "+ userPoints.toString()),
+                Text("Punkte: "+ userPoints.toString(),
+                  style: GoogleFonts.lato(textStyle: TextStyle(color: Colors.black),
+                      fontSize: 30),
+                  textAlign: TextAlign.center,
+                ),
+                Spacer(),
                 GestureDetector(
                   child:answerCard(answers[0], answer: answerValidation[0]),
                   onTap:(){

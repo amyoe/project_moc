@@ -3,7 +3,7 @@ import 'package:flutter/material.dart';
 import 'package:project_moc/layout/homescreen.dart';
 
 class Settings extends StatelessWidget {
-  const Settings ({Key? key}) : super(key: key);
+  const Settings({Key? key}) : super(key: key);
 
   @override
   Widget build(BuildContext context) {
@@ -19,7 +19,7 @@ class Settings extends StatelessWidget {
       home: Scaffold(
         appBar: customAppBar("Einstellungen"),
         body: const Center (
-          child: Text("Hello"),
+          child: Text("Hi"),
         ),
       ),
     );
