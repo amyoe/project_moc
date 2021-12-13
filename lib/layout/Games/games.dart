@@ -1,9 +1,9 @@
-import 'package:project_moc/layout/WelcomeMemorie.dart';
-import 'package:project_moc/layout/quizduell.dart';
+import 'package:project_moc/layout/Games/Memorie/welcome_Memorie.dart';
+import 'package:project_moc/layout/Games/Quizduell/quizduell.dart';
 import 'package:project_moc/layout/widget.dart';
 import 'package:flutter/material.dart';
 import 'package:project_moc/layout/profil.dart';
-import 'package:project_moc/layout/quizduell.dart';
+import 'package:project_moc/layout/Games/Quizduell/quizduell.dart';
 
 class GamesChoice extends StatefulWidget{
   const GamesChoice({Key? key}) : super(key: key);

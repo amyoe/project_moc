@@ -1,10 +1,10 @@
-import 'package:project_moc/layout/Compliance%20Schulungen.dart';
+import 'package:project_moc/layout/Compliance/Compliance%20Schulungen.dart';
 import 'package:project_moc/layout/profil.dart';
 import 'package:project_moc/layout/settings.dart';
 import 'package:project_moc/layout/widget.dart';
 import 'package:flutter/material.dart';
 import 'package:font_awesome_flutter/font_awesome_flutter.dart';
-import 'package:project_moc/layout/games.dart';
+import 'package:project_moc/layout/Games/games.dart';
 
 class HomeScreen extends StatelessWidget {
   const HomeScreen({Key? key}) : super(key: key);
