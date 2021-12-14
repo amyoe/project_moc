@@ -1,4 +1,4 @@
-import 'package:project_moc/layout/games.dart';
+import 'package:project_moc/layout/Games/games.dart';
 import 'package:project_moc/layout/widget.dart';
 import 'package:flutter/material.dart';
 import 'package:project_moc/layout/homescreen.dart';

@@ -1,11 +1,10 @@
-import 'package:google_fonts/google_fonts.dart';
-import 'package:project_moc/layout/Compliance%20Schulungen.dart';
+import 'package:project_moc/layout/Compliance/Compliance%20Schulungen.dart';
 import 'package:project_moc/layout/profil.dart';
 import 'package:project_moc/layout/settings.dart';
 import 'package:project_moc/layout/widget.dart';
 import 'package:flutter/material.dart';
 import 'package:font_awesome_flutter/font_awesome_flutter.dart';
-import 'package:project_moc/layout/games.dart';
+import 'package:project_moc/layout/Games/games.dart';
 
 class HomeScreen extends StatelessWidget {
   const HomeScreen({Key? key}) : super(key: key);
@@ -35,7 +34,6 @@ class HomeScreen extends StatelessWidget {
                   MaterialPageRoute(builder: (context) => const GamesChoice()),
                 );
               },
-              style: ButtonStyle(backgroundColor: MaterialStateProperty.all<Color>(Colors.deepPurpleAccent)),
               child: const Text("Meine Organisation"),
             ),
             ElevatedButton(
@@ -91,10 +89,12 @@ class _MyStatefulWidgetState extends State<MyStatefulWidget> {
             );
           },
         ),
-        Text(
+        const Text(
           'Hallo User!',
-            style: GoogleFonts.lato(textStyle: TextStyle(color: Colors.white),
-                fontSize: 20),
+          style: TextStyle(
+            fontFamily: "Roboto",
+            fontSize: 20,
+          ),
         ),
         IconButton(
           icon: const Icon(

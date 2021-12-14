@@ -6,13 +6,14 @@ import 'package:firebase_storage/firebase_storage.dart';
 
 void main() async {
   WidgetsFlutterBinding.ensureInitialized();
-  //await Firebase.initializeApp();
+  await Firebase.initializeApp(
+    options: DefaultFirebaseOptions.currentPlatform,
+  );
   runApp(const MyApp());
 }
 
 class MyApp extends StatelessWidget {
-  final Future<FirebaseApp> _fbApp = Firebase.initializeApp();
-
+  //final Future<FirebaseApp> _fbApp = Firebase.initializeApp();
   const MyApp({Key? key}) : super(key: key);
 
   // This widget is the root of your application.
@@ -23,32 +24,34 @@ class MyApp extends StatelessWidget {
     return MaterialApp(
         title: appTitle,
         theme: ThemeData(
-        brightness: Brightness.dark,
-        primaryColor: Colors.lightBlue[800],
-        fontFamily: 'Georgia',
-    ),
-    home: FutureBuilder(
-    future: _fbApp,
-    builder: (context, snapshot) {
-    if (snapshot.hasError) {
-    print ("Hier ist ein Fehler: ${snapshot.error.toString()}");
-    return Text("Ups, hier ist etwas schief gelaufen!");
-    } else if (snapshot.hasData) {
-    return Scaffold(
-    appBar: customAppBar("QuizApp HSH"),
-    body: const Center(child: MyCustomForm()),
-    ); // Wollte ich gerne in der Mitte haben
-    } //else {
-    //return Center(child: CircularProgressIndicator());
-    }
-  }
+          brightness: Brightness.dark,
+          primaryColor: Colors.lightBlue[800],
+          fontFamily: 'Georgia',
+        ),
+        home: Scaffold(
+          appBar: customAppBar("QuizApp HSH"),
+          body: const Center(child: MyCustomForm()),
+        )
+    );
 
-  ,
-
-  )
-
-  );
-}}
+    //FutureBuilder(
+    // future: _fbApp,
+    //builder: (context, snapshot) {
+    //if (snapshot.hasError) {
+    //print("Hier ist ein Fehler: ${snapshot.error.toString()}");
+    //return Text("Ups, hier ist etwas schief gelaufen!");
+    //   } else if (snapshot.hasData) {
+    //    return Scaffold(
+    //      appBar: customAppBar("QuizApp HSH"),
+    //      body: const Center(child: MyCustomForm()),
+    //      ); // Wollte ich gerne in der Mitte haben
+    //      } else {
+    //    return Center(child: CircularProgressIndicator());
+ //}
+//},)
+//);
+}
+}
 
 // Ein Formular erstellen
 
