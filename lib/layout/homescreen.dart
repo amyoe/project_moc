@@ -1,4 +1,4 @@
-import 'package:project_moc/layout/Compliance/Compliance%20Schulungen.dart';
+import 'package:project_moc/layout/Compliance/compliance_schulungen.dart';
 import 'package:project_moc/layout/profil.dart';
 import 'package:project_moc/layout/settings.dart';
 import 'package:project_moc/layout/widget.dart';

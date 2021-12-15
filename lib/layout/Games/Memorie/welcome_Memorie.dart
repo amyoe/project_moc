@@ -3,7 +3,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter/widgets.dart';
 import 'package:project_moc/layout/Games/Memorie/memorie_profil.dart';
-import 'package:project_moc/layout/Schwierigkeitsstufe.dart';
+import 'package:project_moc/layout/Games/Memorie/schwierigkeitsstufe.dart';
 import 'package:project_moc/layout/widget.dart';
 
 class WelcomeMemorie extends StatelessWidget {

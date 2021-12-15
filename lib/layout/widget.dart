@@ -1,15 +1,10 @@
 // AppBar für jeden View, damit Anpassungen leichter sind
 import 'package:flutter/material.dart';
-import 'package:google_fonts/google_fonts.dart';
 
 PreferredSizeWidget customAppBar(String title) {
   return AppBar(
     centerTitle: true,
-    title: Text (
-      title,
-      style: GoogleFonts.lato(textStyle: TextStyle(color: Colors.black),
-      fontSize: 35),
-    ),
+    title: Text (title)
   );
 }
 
@@ -26,9 +21,7 @@ Widget answerCard(String text, {bool? answer}) {
           : Colors.red,
       child: Padding(
         padding: const EdgeInsets.all(10.0),
-        child: Text(text,
-            style: GoogleFonts.lato(textStyle: TextStyle(color: Colors.black),
-                fontSize: 20)),
+        child: Text(text),
       ),
     ),
   );

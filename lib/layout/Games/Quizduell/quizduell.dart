@@ -1,4 +1,3 @@
-import 'package:google_fonts/google_fonts.dart';
 import 'package:project_moc/logic/question_controller.dart';
 import 'package:project_moc/logic/questions.dart';
 import 'package:project_moc/layout/widget.dart';
@@ -82,16 +81,10 @@ class _QuizDuellSate extends State<QuizDuell> {
                 Spacer(),
                 Text(
                   currentQuestion.question,
-                    style: GoogleFonts.lato(textStyle: TextStyle(color: Colors.black),
-                        fontSize: 30),
-                  textAlign: TextAlign.center,
                 ),
                 Spacer(),
                 Text("Punkte: "+ userPoints.toString(),
-                  style: GoogleFonts.lato(textStyle: TextStyle(color: Colors.black),
-                      fontSize: 30),
-                  textAlign: TextAlign.center,
-                ),
+                  ),
                 Spacer(),
                 GestureDetector(
                   child:answerCard(answers[0], answer: answerValidation[0]),
