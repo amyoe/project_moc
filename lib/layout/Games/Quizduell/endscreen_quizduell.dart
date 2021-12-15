@@ -1,7 +1,11 @@
 //Der Screen soll die Punkte anzeigen, wenn das Spiel beendet wurde
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
+import 'package:font_awesome_flutter/font_awesome_flutter.dart';
+import 'package:project_moc/layout/Games/Quizduell/quizduell.dart';
 import 'package:project_moc/layout/widget.dart';
+
+import '../../homescreen.dart';
 
 class EndScreen extends StatelessWidget {
   final int userPoints;
@@ -11,7 +15,49 @@ class EndScreen extends StatelessWidget {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: customAppBar("Dein Punktestand"),
-      body: Text("Hallo du hast " + userPoints.toString() + " von 10 Fragen richtig beantwortet." ),
+      body: Container(
+        child: Center(
+          child: Padding(
+            padding: const EdgeInsets.all(10.0),
+            child: Column(
+              mainAxisAlignment: MainAxisAlignment.center,
+              children: [
+                Text("Super, du hast " + userPoints.toString() + " von 10 Fragen richtig beantwortet." ),
+                ElevatedButton(
+                    onPressed: (){
+                      Navigator.push(context,
+                        MaterialPageRoute(builder: (context) => const QuizDuell()),
+                );
+                },
+                    child: Text("Nochmal spielen"),
+                ),
+                IconButton(
+                  icon: const Icon(
+                    FontAwesomeIcons.redo,
+                    size: 40,
+                    color: Colors.blueGrey,
+                  ),
+                  onPressed: () {
+                    Navigator.push(
+                      context,
+                      MaterialPageRoute(builder: (context) => const QuizDuell()),
+                    );
+                  },
+                ),
+                const Text("Nochmal spielen"),
+                ElevatedButton(
+                  onPressed: (){
+                    Navigator.push(context,
+                      MaterialPageRoute(builder: (context) => const HomeScreen()),
+                    );
+                  },
+                  child: Text("Zurück zum Hauptmenü"),
+                ),
+              ],
+            ),
+          ),
+        ),
+      ),
     );
   }
 }

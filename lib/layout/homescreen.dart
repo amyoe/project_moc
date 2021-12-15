@@ -18,6 +18,7 @@ class HomeScreen extends StatelessWidget {
           crossAxisAlignment: CrossAxisAlignment.center,
           children: [
             MyStatefulWidget(),
+            Spacer(),
             ElevatedButton(
               onPressed: () {
                 Navigator.push(
@@ -54,6 +55,7 @@ class HomeScreen extends StatelessWidget {
               },
               child: const Text("Monatsranking"),
             ),
+            Spacer(),
           ],
         ),
       ),

@@ -8,18 +8,19 @@ class Settings extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     const title = 'Grid List';
-
-    return MaterialApp(
-      title: title,
-      theme: ThemeData(
-        brightness: Brightness.dark,
-        primaryColor: Colors.lightBlue[800],
-        fontFamily: 'Georgia',
-      ),
-      home: Scaffold(
-        appBar: customAppBar("Einstellungen"),
-        body: const Center (
-          child: Text("Hi"),
+    return Scaffold(
+      appBar: customAppBar("Deine Einstellungen"),
+      body: Container(
+        child: Center(
+          child: Padding(
+            padding: EdgeInsets.all(10.0),
+            child: Column(
+              mainAxisAlignment: MainAxisAlignment.center,
+              children: [
+                Text("Hier sind deine Einstellungen"),
+              ],
+            ),
+          ),
         ),
       ),
     );

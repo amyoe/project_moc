@@ -76,7 +76,7 @@ class _QuizDuellSate extends State<QuizDuell> {
                   totalSteps: 10,
                   currentStep: currentLevel,
                   selectedColor: Colors.green,
-                  unselectedColor: Colors.red,
+                  unselectedColor: Colors.grey,
                 ),
                 Spacer(),
                 Text(
