@@ -1,5 +1,6 @@
 import 'package:firebase_auth/firebase_auth.dart';
 import 'package:project_moc/layout/homescreen.dart';
+import 'package:project_moc/layout/login.dart';
 import 'package:project_moc/model/user.dart';
 import 'package:flutter/material.dart';
 import 'package:project_moc/services/auth.dart';
@@ -11,16 +12,16 @@ class Wrapper extends StatelessWidget{
   @override
   Widget build(BuildContext context){
     final authService = Provider.of<AuthService>(context);
-    return StreamBuilder<User?>(
+    return StreamBuilder<OurUser?>(
       stream: authService.user,
-      builder: (_, AsyncSnapshot<User?> snapshot) {
+      builder: (_, AsyncSnapshot<OurUser?> snapshot) {
         if (snapshot.connectionState == ConnectionState.active) {
-          final User? user = snapshot.data;
-          return user == null ? HomeScreen() : HomeScreen();
+          final OurUser? user = snapshot.data;
+          return user == null ? LoginScreen() : HomeScreen();
         } else {
           return Scaffold(
             body: Center(
-              child: Text("Hi"),
+              child: CircularStepProgressIndicator(totalSteps: 1,),
             ),
           );
         }

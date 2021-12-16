@@ -14,7 +14,7 @@ class AuthService {
     return OurUser(user.uid, user.email);
   }
 
-  Stream<User?>? get user{
+  Stream<OurUser?>? get user{
     return _firebaseAuth.authStateChanges().map((event) => null);
   }
 
