@@ -5,12 +5,15 @@ import 'package:project_moc/layout/widget.dart';
 import 'package:flutter/material.dart';
 import 'package:font_awesome_flutter/font_awesome_flutter.dart';
 import 'package:project_moc/layout/Games/games.dart';
+import 'package:project_moc/services/auth.dart';
+import 'package:provider/provider.dart';
 
 class HomeScreen extends StatelessWidget {
   const HomeScreen({Key? key}) : super(key: key);
 
   @override
   Widget build(BuildContext context) {
+    final authService = Provider.of<AuthService>(context);
     return Scaffold(
       appBar: customAppBar("Willkommen"),
       body: Center(
@@ -47,13 +50,10 @@ class HomeScreen extends StatelessWidget {
               child: const Text("Compliance Schulung"),
             ),
             ElevatedButton(
-              onPressed: () {
-                Navigator.push(
-                  context,
-                  MaterialPageRoute(builder: (context) => const GamesChoice()),
-                );
+              onPressed: () async {
+                await authService.signOut();
               },
-              child: const Text("Monatsranking"),
+              child: const Text("Ausloggen"),
             ),
             Spacer(),
           ],

@@ -15,7 +15,7 @@ class AuthService {
   }
 
   Stream<OurUser?>? get user{
-    return _firebaseAuth.authStateChanges().map((event) => null);
+    return _firebaseAuth.authStateChanges().map(_userFromFirebase);
   }
 
   Future<OurUser?> signInWithEmailAndPassword(
@@ -24,7 +24,7 @@ class AuthService {
       ) async {
         final credential = await _firebaseAuth.signInWithEmailAndPassword(
             email: email,
-            password: password
+            password: password,
         );
 
     return _userFromFirebase(credential.user);

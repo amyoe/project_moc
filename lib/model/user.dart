@@ -17,6 +17,9 @@
 //User(this.uid, this.email);
 //}
 
+//Konflikt mit unserer User Klasse und der User Klasse von Fire Auth
+//Deshalb hier umbenannt in OurUser
+//Die Attribute die wir noch nicht benötigen auskommentiert damit keine Fehlermeldungen kommen
 class OurUser {
   final String uid;
   //final String imagePath;

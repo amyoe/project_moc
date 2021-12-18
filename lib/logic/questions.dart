@@ -1,3 +1,4 @@
+//Amy Oevermann
 // Funktion für die Fragen
 // Das Model besteht aus Frage, richtiger Antwort und falscher Antwort
 // So muss das auch hier dem Model übergeben werden

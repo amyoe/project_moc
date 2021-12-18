@@ -1,3 +1,4 @@
+//Amy Oevermann
 import 'package:firebase_auth/firebase_auth.dart';
 import 'package:project_moc/layout/homescreen.dart';
 import 'package:project_moc/layout/login.dart';
@@ -21,7 +22,7 @@ class Wrapper extends StatelessWidget{
         } else {
           return Scaffold(
             body: Center(
-              child: CircularStepProgressIndicator(totalSteps: 1,),
+              child: CircularProgressIndicator(),
             ),
           );
         }

@@ -14,7 +14,7 @@ class RegisterScreen extends StatelessWidget {
     final authService = Provider.of<AuthService>(context);
 
     return Scaffold(
-      appBar: customAppBar("Login"),
+      appBar: customAppBar("Registrieren"),
       body: Column(
         mainAxisAlignment: MainAxisAlignment.center,
         children: [
@@ -46,7 +46,7 @@ class RegisterScreen extends StatelessWidget {
                   emailController.text,
                   passwordController.text,
               );
-              Navigator.pop(context);
+             Navigator.pop(context);
             },
             child: Text("Registieren"),
           ),
@@ -54,6 +54,4 @@ class RegisterScreen extends StatelessWidget {
       ),
     );
   }
-
-
 }
