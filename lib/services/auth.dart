@@ -1,3 +1,4 @@
+//Amy Oevermann
 import 'package:firebase_auth/firebase_auth.dart';
 import 'package:firebase_auth/firebase_auth.dart' as auth;
 import 'package:project_moc/model/user.dart';

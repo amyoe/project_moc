@@ -1,3 +1,4 @@
+//Amy Oevermann
 // Klasse, in der die Fragen angezeigt werden
 class QuizModel {
   String question;

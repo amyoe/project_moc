@@ -11,7 +11,6 @@ class LoginScreen extends StatelessWidget {
   Widget build(BuildContext context) {
     final TextEditingController emailController = TextEditingController();
     final TextEditingController passwordController = TextEditingController();
-
     final authService = Provider.of<AuthService>(context);
 
     return Scaffold(

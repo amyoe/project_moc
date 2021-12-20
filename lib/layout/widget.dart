@@ -1,4 +1,4 @@
-// AppBar für jeden View, damit Anpassungen leichter sind
+// AppBar für jede View, damit Anpassungen leichter sind
 import 'package:flutter/material.dart';
 
 PreferredSizeWidget customAppBar(String title) {
@@ -8,7 +8,7 @@ PreferredSizeWidget customAppBar(String title) {
   );
 }
 
-// Global ausgelagert die Antwortkarten
+// Global ausgelagert die Antwortkarten für QuizDuell
 Widget answerCard(String text, {bool? answer}) {
   return Container(
     height: 60,
@@ -28,7 +28,6 @@ Widget answerCard(String text, {bool? answer}) {
 }
 
 //Widget für das PopUp Dialog
-
 Widget buildPopupDialog(BuildContext context) {
   return AlertDialog(
     title: const Text('Popup example'),
@@ -48,4 +47,23 @@ Widget buildPopupDialog(BuildContext context) {
       ),
     ],
   );
+}
+
+//Icon Widget für die Settings View
+class IconWidget extends StatelessWidget{
+  final IconData icon;
+  final Color color;
+  const IconWidget ({Key? key, required this.icon, required this.color,}) : super(key:key);
+
+  @override
+  Widget build(BuildContext context) {
+    return Container(
+      padding: EdgeInsets.all(6),
+      decoration: BoxDecoration(
+        shape: BoxShape.circle,
+        color: color,
+      ),
+      child: Icon(icon, color: Colors.white),
+    );
+  }
 }
