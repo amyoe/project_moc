@@ -11,9 +11,7 @@ class RegisterScreen extends StatelessWidget {
   Widget build(BuildContext context) {
     final TextEditingController emailController = TextEditingController();
     final TextEditingController passwordController = TextEditingController();
-
     final authService = Provider.of<AuthService>(context);
-
     return Scaffold(
       appBar: customAppBar("Registrieren"),
       body: Column(
@@ -35,11 +33,8 @@ class RegisterScreen extends StatelessWidget {
               decoration: InputDecoration(
                 labelText: "Passwort",
               ),
+              obscureText: true,
             ),
-          ),
-          ElevatedButton(
-            onPressed: (){},
-            child: Text("Login"),
           ),
           ElevatedButton(
             onPressed: () async {

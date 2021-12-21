@@ -2,11 +2,11 @@
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:font_awesome_flutter/font_awesome_flutter.dart';
+import 'package:google_fonts/google_fonts.dart';
 import 'package:project_moc/layout/Games/Quizduell/quizduell.dart';
 import 'package:project_moc/layout/widget.dart';
 
 import '../../homescreen.dart';
-
 class EndScreen extends StatelessWidget {
   final int userPoints;
   const EndScreen({Key? key, required this.userPoints}) : super(key: key);
@@ -22,36 +22,31 @@ class EndScreen extends StatelessWidget {
             child: Column(
               mainAxisAlignment: MainAxisAlignment.center,
               children: [
-                Text("Super, du hast " + userPoints.toString() + " von 10 Fragen richtig beantwortet." ),
-                ElevatedButton(
+                Text("Super, du hast " + userPoints.toString() + " von 10 Fragen richtig beantwortet.",
+                  style: GoogleFonts.raleway(fontSize: 25),
+                  textAlign: TextAlign.center,
+                ),
+                Padding(
+                  padding: const EdgeInsets.all(10.0),
+                  child: ElevatedButton(
+                      onPressed: (){
+                        Navigator.push(context,
+                          MaterialPageRoute(builder: (context) => const QuizDuell()),
+                  );
+                  },
+                      child: Text("Nochmal spielen"),
+                  ),
+                ),
+                Padding(
+                  padding: const EdgeInsets.all(8.0),
+                  child: ElevatedButton(
                     onPressed: (){
                       Navigator.push(context,
-                        MaterialPageRoute(builder: (context) => const QuizDuell()),
-                );
-                },
-                    child: Text("Nochmal spielen"),
-                ),
-                IconButton(
-                  icon: const Icon(
-                    FontAwesomeIcons.redo,
-                    size: 40,
-                    color: Colors.blueGrey,
+                        MaterialPageRoute(builder: (context) => const HomeScreen()),
+                      );
+                    },
+                    child: Text("Zurück zum Hauptmenü"),
                   ),
-                  onPressed: () {
-                    Navigator.push(
-                      context,
-                      MaterialPageRoute(builder: (context) => const QuizDuell()),
-                    );
-                  },
-                ),
-                const Text("Nochmal spielen"),
-                ElevatedButton(
-                  onPressed: (){
-                    Navigator.push(context,
-                      MaterialPageRoute(builder: (context) => const HomeScreen()),
-                    );
-                  },
-                  child: Text("Zurück zum Hauptmenü"),
                 ),
               ],
             ),

@@ -23,3 +23,29 @@ int getCorrectAnswerIndex(List<String> answers, String correctAnswer){
   }
   return -1;
 }
+
+//Company
+
+
+
+List<String> getQuestionCompanyRandomList(List<String> companyWrongAnswers, String companyCorrectAnswer) {
+  companyWrongAnswers.add(companyCorrectAnswer);
+  companyWrongAnswers.shuffle();
+  return companyWrongAnswers;
+}
+
+//Zufällige Reihenfolge der Fragen
+List<int> getQuestionCompanyIndexRandom(int length) {
+  var list = new List<int>.generate(length, (index)=> index);
+  list.shuffle();
+  return list;
+}
+
+int getCorrectCompanyAnswerIndex(List<String> companyAnswers, String companyCorrectAnswer){
+  for (int index = 0; index < companyAnswers.length; index++){
+    if(companyAnswers[index].compareTo(companyCorrectAnswer) == 0){
+      return index;
+    }
+  }
+  return -1;
+}

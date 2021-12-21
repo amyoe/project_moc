@@ -1,10 +1,14 @@
 // AppBar für jede View, damit Anpassungen leichter sind
 import 'package:flutter/material.dart';
+import 'package:google_fonts/google_fonts.dart';
 
 PreferredSizeWidget customAppBar(String title) {
   return AppBar(
     centerTitle: true,
-    title: Text (title)
+    title: Text (
+      title,
+      style: GoogleFonts.raleway(fontSize: 35),
+    ),
   );
 }
 

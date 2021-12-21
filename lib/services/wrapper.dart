@@ -7,8 +7,6 @@ import 'package:flutter/material.dart';
 import 'package:project_moc/services/auth.dart';
 import 'package:provider/provider.dart';
 import 'package:step_progress_indicator/step_progress_indicator.dart';
-
-
 class Wrapper extends StatelessWidget{
   @override
   Widget build(BuildContext context){

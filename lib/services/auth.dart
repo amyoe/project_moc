@@ -4,7 +4,6 @@ import 'package:firebase_auth/firebase_auth.dart' as auth;
 import 'package:project_moc/model/user.dart';
 import 'package:firebase_core/firebase_core.dart';
 
-
 class AuthService {
   final auth.FirebaseAuth _firebaseAuth = auth.FirebaseAuth.instance;
 
@@ -27,7 +26,6 @@ class AuthService {
             email: email,
             password: password,
         );
-
     return _userFromFirebase(credential.user);
   }
 

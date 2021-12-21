@@ -1,4 +1,5 @@
 //Amy Oevermann
+import 'package:google_fonts/google_fonts.dart';
 import 'package:project_moc/layout/Compliance/compliance_schulungen.dart';
 import 'package:project_moc/layout/profil.dart';
 import 'package:project_moc/layout/settings.dart';
@@ -64,7 +65,6 @@ class HomeScreen extends StatelessWidget {
   }
 }
 
-// This is the stateful widget that the main application instantiates.
 class MyStatefulWidget extends StatefulWidget {
   const MyStatefulWidget({Key? key}) : super(key: key);
 
@@ -72,47 +72,46 @@ class MyStatefulWidget extends StatefulWidget {
   State<MyStatefulWidget> createState() => _MyStatefulWidgetState();
 }
 
-// This is the private State class that goes with MyStatefulWidget.
 class _MyStatefulWidgetState extends State<MyStatefulWidget> {
   @override
   Widget build(BuildContext context) {
-    return Row(
-      mainAxisAlignment: MainAxisAlignment.spaceBetween,
-      children: <Widget>[
-        IconButton(
-          icon: const Icon(
-            FontAwesomeIcons.cog,
-            size: 40,
-            color: Colors.blueGrey,
+    return Padding(
+      padding: const EdgeInsets.only(top: 15.0),
+      child: Row(
+        mainAxisAlignment: MainAxisAlignment.spaceBetween,
+        children: <Widget>[
+          IconButton(
+            icon: const Icon(
+              FontAwesomeIcons.cog,
+              size: 40,
+              color: Colors.blueGrey,
+            ),
+            onPressed: () {
+              Navigator.push(
+                context,
+                MaterialPageRoute(builder: (context) => const Settings()),
+              );
+            },
           ),
-          onPressed: () {
-            Navigator.push(
-              context,
-              MaterialPageRoute(builder: (context) => const Settings()),
-            );
-          },
-        ),
-        const Text(
-          'Hallo User!',
-          style: TextStyle(
-            fontFamily: "Roboto",
-            fontSize: 20,
+          Text(
+            'Hallo User!',
+            style: GoogleFonts.raleway(fontSize: 25),
           ),
-        ),
-        IconButton(
-          icon: const Icon(
-            FontAwesomeIcons.user,
-            size: 40,
-            color: Colors.blueGrey,
+          IconButton(
+            icon: const Icon(
+              FontAwesomeIcons.user,
+              size: 40,
+              color: Colors.blueGrey,
+            ),
+            onPressed: () {
+              Navigator.push(
+                context,
+                MaterialPageRoute(builder: (context) => ProfilScreen()),
+              );
+            },
           ),
-          onPressed: () {
-            Navigator.push(
-              context,
-              MaterialPageRoute(builder: (context) => ProfilScreen()),
-            );
-          },
-        ),
-      ],
+        ],
+      ),
     );
   }
 }

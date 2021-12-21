@@ -1,9 +1,12 @@
+//Amy Oevermann
 import 'package:project_moc/layout/Games/Memorie/welcome_Memorie.dart';
 import 'package:project_moc/layout/Games/Quizduell/quizduell.dart';
 import 'package:project_moc/layout/widget.dart';
 import 'package:flutter/material.dart';
 import 'package:project_moc/layout/profil.dart';
 import 'package:project_moc/layout/Games/Quizduell/quizduell.dart';
+
+import 'Quizduell/quizduell_choice.dart';
 
 class GamesChoice extends StatefulWidget{
   const GamesChoice({Key? key}) : super(key: key);
@@ -27,7 +30,7 @@ class _GamesChoiceSate extends State<GamesChoice> {
                 ElevatedButton(
                   onPressed: (){
                     Navigator.push(context,
-                      MaterialPageRoute(builder: (context) => const QuizDuell()),
+                      MaterialPageRoute(builder: (context) => QuizDuellChoice()),
                     );
                   },
                   child: Text("QuizDuell"),

@@ -1,8 +1,10 @@
 //Amy Oevermann
 import 'package:flutter/material.dart';
 import 'package:project_moc/layout/widget.dart';
+import 'package:project_moc/model/user.dart';
 import 'package:project_moc/services/auth.dart';
 import 'package:provider/provider.dart';
+import 'package:firebase_auth/firebase_auth.dart';
 
 class LoginScreen extends StatelessWidget {
   const LoginScreen({Key? key,}) : super(key: key);
@@ -12,6 +14,8 @@ class LoginScreen extends StatelessWidget {
     final TextEditingController emailController = TextEditingController();
     final TextEditingController passwordController = TextEditingController();
     final authService = Provider.of<AuthService>(context);
+    final auth = FirebaseAuth.instance;
+
 
     return Scaffold(
       appBar: customAppBar("Login"),
@@ -34,6 +38,7 @@ class LoginScreen extends StatelessWidget {
               decoration: InputDecoration(
                 labelText: "Passwort",
               ),
+              obscureText: true,
             ),
           ),
           ElevatedButton(
@@ -50,6 +55,13 @@ class LoginScreen extends StatelessWidget {
                 Navigator.pushNamed(context, '/register');
               },
               child: Text("Registieren"),
+          ),
+          TextButton(
+            onPressed: (){
+             // auth.sendPasswordResetEmail(email: OurUser.email);
+              Navigator.of(context).pop;
+            },
+            child: Text("Password zurücksetzen"),
           ),
         ],
       ),
