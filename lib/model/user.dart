@@ -20,13 +20,16 @@
 //Konflikt mit unserer User Klasse und der User Klasse von Fire Auth
 //Deshalb hier umbenannt in OurUser
 //Die Attribute die wir noch nicht benötigen auskommentiert damit keine Fehlermeldungen kommen
+
 class OurUser {
   final String uid;
-  //final String imagePath;
-  //final String nameBenutzer;
+  //final String profileImage;
+  //final String vorname;
   //final String nachname;
   final String? email;
-  //final String about;
+  //final String bio;
+
+  //final String nachname;
   //final bool isProfilhidden;
   //final bool isDarkMode;
   //int Alter;

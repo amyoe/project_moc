@@ -1,6 +1,7 @@
 //Amy Oevermann
 import 'package:google_fonts/google_fonts.dart';
 import 'package:project_moc/layout/Compliance/compliance_schulungen.dart';
+import 'package:project_moc/layout/edit_profil.dart';
 import 'package:project_moc/layout/profil.dart';
 import 'package:project_moc/layout/settings.dart';
 import 'package:project_moc/layout/widget.dart';
@@ -46,7 +47,8 @@ class HomeScreen extends StatelessWidget {
               onPressed: () {
                 Navigator.push(
                   context,
-                  MaterialPageRoute(builder: (context) => const ComplianceOverview()),
+                  MaterialPageRoute(
+                      builder: (context) => const ComplianceOverview()),
                 );
               },
               child: const Text("Compliance Schulung"),
@@ -106,7 +108,8 @@ class _MyStatefulWidgetState extends State<MyStatefulWidget> {
             onPressed: () {
               Navigator.push(
                 context,
-                MaterialPageRoute(builder: (context) => ProfilScreen()),
+               // MaterialPageRoute(builder: (context) => ProfilScreen()),
+                MaterialPageRoute(builder: (context)=> EditProfil()),
               );
             },
           ),

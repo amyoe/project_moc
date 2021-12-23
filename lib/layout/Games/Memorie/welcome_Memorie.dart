@@ -17,7 +17,7 @@ class WelcomeMemorie extends StatelessWidget {
         child: Column(
           mainAxisAlignment: MainAxisAlignment.center,
           children: [
-            Text("Hey <Vorname>,"),
+            Text("Hey Name,"),
             // <Vorname> durch Variable ersetzen
             Text("hier kannst Du spielerisch Deine Kollegen kennenlernen."),
             const SizedBox(height: 48),

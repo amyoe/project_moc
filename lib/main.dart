@@ -22,6 +22,10 @@ class MyApp extends StatelessWidget {
   Widget build(BuildContext context) {
     const appTitle = 'Quiz App Hochschule Hannover';
 
+
+    //https://www.youtube.com/watch?v=j_SJ7XmT2MM&list=PL4cUxeGkcC9j--TKIdkb3ISfRbJeJYQwC&index=8
+    // So ab Minute 3 schreibt er was dazu, sieht aber wanders aus als deins, gibt aber glaube ich die user info zurück
+
     return MultiProvider(
       providers: [
         Provider<AuthService>(create: (_) => AuthService(),),

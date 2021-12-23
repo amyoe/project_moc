@@ -1,17 +1,33 @@
-import 'package:project_moc/layout/Games/games.dart';
+import 'package:flutter/cupertino.dart';
 import 'package:project_moc/layout/widget.dart';
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
-import 'package:project_moc/layout/homescreen.dart';
+import 'package:firebase_auth/firebase_auth.dart';
+import 'package:project_moc/storage/database.dart';
+import 'package:cloud_firestore/cloud_firestore.dart';
+import 'package:project_moc/model/user.dart';
+import 'package:project_moc/storage/database.dart';
 
-class ProfilScreen extends StatefulWidget {
+class EditProfil extends StatefulWidget {
+  const EditProfil({Key? key}) : super(key: key);
+
   @override
-  _ProfilScreenState createState() => _ProfilScreenState();
+  _EditProfilState createState() => _EditProfilState();
 }
 
-class _ProfilScreenState extends State<ProfilScreen> {
+class _EditProfilState extends State<EditProfil> {
+  void connectToFirebase() async {
+    final FirebaseAuth authenticate = FirebaseAuth.instance;
+    AuthResult result = await authenticate.signInWithEmailAndPassword(
+        email: email, password: password);
+    OurUser = result.OurUser;
+    
+    database = DatabaseService(OurUser.uid);
+  }
+
   void initState() {
     super.initState();
+    connectToFirebase();
   }
 
   final _formKey = GlobalKey<FormState>();
@@ -39,12 +55,28 @@ class _ProfilScreenState extends State<ProfilScreen> {
                     keyboardType: TextInputType.text,
                     autocorrect: false,
                     decoration: const InputDecoration(
-                      labelText: 'Dein Name',
+                      labelText: 'Dein Vorname',
                       border: OutlineInputBorder(),
                     ),
                     validator: (String? value) {
                       if (value!.isEmpty) {
-                        return 'Bitte gib deinen Namen ein';
+                        return 'Bitte gib deinen Vornamen ein';
+                      }
+                      return null;
+                    },
+                  ),
+                  SizedBox(height: 24),
+                  TextFormField(
+                    style: GoogleFonts.raleway(fontSize: 16),
+                    keyboardType: TextInputType.text,
+                    autocorrect: false,
+                    decoration: const InputDecoration(
+                      labelText: 'Dein Nachname',
+                      border: OutlineInputBorder(),
+                    ),
+                    validator: (String? value) {
+                      if (value!.isEmpty) {
+                        return 'Bitte gib deinen Nachnamen ein';
                       }
                       return null;
                     },
