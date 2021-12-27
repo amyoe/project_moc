@@ -1,16 +1,17 @@
 // Franziska Petzold
-
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/painting.dart';
+import 'package:google_fonts/google_fonts.dart';
 
 Widget info_card(String title, String info) {
   return Expanded(
     child: Container(
-      margin: EdgeInsets.all(24.0),
-      padding: EdgeInsets.symmetric(vertical: 8.0, horizontal: 24.0),
-      decoration: const BoxDecoration(
-        color: Colors.blueGrey,
+      margin: const EdgeInsets.all(24.0),
+      padding: const EdgeInsets.symmetric(vertical: 8.0, horizontal: 24.0),
+      decoration:  BoxDecoration(
+        color: Colors.grey,
+        borderRadius: BorderRadius.circular(5.0),
       ),
       child: Column(
         children: [
@@ -26,7 +27,8 @@ Widget info_card(String title, String info) {
           ),
           Text(
             info,
-            style: TextStyle(fontSize: 34.0, fontWeight: FontWeight.normal),
+            style:
+                const TextStyle(fontSize: 30.0, fontWeight: FontWeight.normal),
           ),
         ],
       ),

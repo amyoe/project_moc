@@ -1,10 +1,11 @@
 //Amy Oevermann
 import 'package:project_moc/layout/Games/Memorie/memory.dart';
+import 'package:project_moc/layout/Games/tictoc.dart';
 import 'package:project_moc/layout/widget.dart';
 import 'package:flutter/material.dart';
 import 'Quizduell/quizduell_choice.dart';
 
-class GamesChoice extends StatefulWidget{
+class GamesChoice extends StatefulWidget {
   const GamesChoice({Key? key}) : super(key: key);
 
   @override
@@ -24,24 +25,32 @@ class _GamesChoiceSate extends State<GamesChoice> {
               mainAxisAlignment: MainAxisAlignment.center,
               children: [
                 ElevatedButton(
-                  onPressed: (){
-                    Navigator.push(context,
-                      MaterialPageRoute(builder: (context) => QuizDuellChoice()),
+                  onPressed: () {
+                    Navigator.push(
+                      context,
+                      MaterialPageRoute(
+                          builder: (context) => QuizDuellChoice()),
                     );
                   },
                   child: Text("QuizDuell"),
                 ),
-                 ElevatedButton(
-                  onPressed: (){
-                    Navigator.push(context,
-                    MaterialPageRoute(builder: (context) => Memorie()),
+                ElevatedButton(
+                  onPressed: () {
+                    Navigator.push(
+                      context,
+                      MaterialPageRoute(builder: (context) => Memorie()),
                     );
                   },
                   child: Text("Memorie"),
                 ),
-                const ElevatedButton(
-                  onPressed: null,
-                  child: Text("Activity"),
+                ElevatedButton(
+                  onPressed: () {
+                    Navigator.push(
+                      context,
+                      MaterialPageRoute(builder: (context) => TicToc()),
+                    );
+                  },
+                  child: Text("Tik Tok"),
                 ),
                 const ElevatedButton(
                   onPressed: null,
@@ -55,5 +64,3 @@ class _GamesChoiceSate extends State<GamesChoice> {
     );
   }
 }
-
-
