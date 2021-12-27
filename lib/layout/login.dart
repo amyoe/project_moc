@@ -1,7 +1,6 @@
 //Amy Oevermann
 import 'package:flutter/material.dart';
 import 'package:project_moc/layout/widget.dart';
-import 'package:project_moc/model/user.dart';
 import 'package:project_moc/services/auth.dart';
 import 'package:provider/provider.dart';
 import 'package:firebase_auth/firebase_auth.dart';
@@ -14,7 +13,7 @@ class LoginScreen extends StatelessWidget {
     final TextEditingController emailController = TextEditingController();
     final TextEditingController passwordController = TextEditingController();
     final authService = Provider.of<AuthService>(context);
-    final auth = FirebaseAuth.instance;
+   final auth = FirebaseAuth.instance;
 
 
     return Scaffold(
@@ -26,7 +25,7 @@ class LoginScreen extends StatelessWidget {
             padding: EdgeInsets.all(8.0),
             child: TextField(
               controller: emailController,
-              decoration: InputDecoration(
+              decoration: const InputDecoration(
                 labelText: "Email",
               ),
             ),
@@ -35,7 +34,7 @@ class LoginScreen extends StatelessWidget {
             padding: EdgeInsets.all(8.0),
             child: TextField(
               controller: passwordController,
-              decoration: InputDecoration(
+              decoration: const InputDecoration(
                 labelText: "Passwort",
               ),
               obscureText: true,

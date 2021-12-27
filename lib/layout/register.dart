@@ -5,7 +5,9 @@ import 'package:project_moc/services/auth.dart';
 import 'package:provider/provider.dart';
 
 class RegisterScreen extends StatelessWidget {
-  const RegisterScreen({Key? key,}) : super(key: key);
+  const RegisterScreen({
+    Key? key,
+  }) : super(key: key);
 
   @override
   Widget build(BuildContext context) {
@@ -21,8 +23,24 @@ class RegisterScreen extends StatelessWidget {
             padding: EdgeInsets.all(8.0),
             child: TextField(
               controller: emailController,
-              decoration: InputDecoration(
+              decoration: const InputDecoration(
                 labelText: "Email",
+              ),
+            ),
+          ),
+          const Padding(
+            padding: EdgeInsets.all(8.0),
+            child: TextField(
+              decoration: InputDecoration(
+                labelText: "Vorname",
+              ),
+            ),
+          ),
+          const Padding(
+            padding: EdgeInsets.all(8.0),
+            child: TextField(
+              decoration: InputDecoration(
+                labelText: "Nachname",
               ),
             ),
           ),
@@ -30,7 +48,7 @@ class RegisterScreen extends StatelessWidget {
             padding: EdgeInsets.all(8.0),
             child: TextField(
               controller: passwordController,
-              decoration: InputDecoration(
+              decoration: const InputDecoration(
                 labelText: "Passwort",
               ),
               obscureText: true,
@@ -38,11 +56,11 @@ class RegisterScreen extends StatelessWidget {
           ),
           ElevatedButton(
             onPressed: () async {
-             await authService.createUserWithEmailAndPassword(
-                  emailController.text,
-                  passwordController.text,
+              await authService.createUserWithEmailAndPassword(
+                emailController.text,
+                passwordController.text,
               );
-             Navigator.pop(context);
+              Navigator.pop(context);
             },
             child: Text("Registieren"),
           ),

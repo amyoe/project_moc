@@ -1,4 +1,5 @@
 //Amy Oevermann
+import 'package:project_moc/layout/Games/Memorie/memorie2.dart';
 import 'package:project_moc/layout/Games/Memorie/welcome_Memorie.dart';
 import 'package:project_moc/layout/Games/Quizduell/quizduell.dart';
 import 'package:project_moc/layout/widget.dart';
@@ -38,10 +39,10 @@ class _GamesChoiceSate extends State<GamesChoice> {
                  ElevatedButton(
                   onPressed: (){
                     Navigator.push(context,
-                    MaterialPageRoute(builder: (context) => WelcomeMemorie()),
+                    MaterialPageRoute(builder: (context) => Memorie()),
                     );
                   },
-                  child: Text("Kollegen-Memorie"),
+                  child: Text("Memorie"),
                 ),
                 const ElevatedButton(
                   onPressed: null,

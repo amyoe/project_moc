@@ -108,8 +108,8 @@ class _MyStatefulWidgetState extends State<MyStatefulWidget> {
             onPressed: () {
               Navigator.push(
                 context,
-               // MaterialPageRoute(builder: (context) => ProfilScreen()),
-                MaterialPageRoute(builder: (context)=> EditProfil()),
+                MaterialPageRoute(builder: (context) => ProfilScreen()),
+                //MaterialPageRoute(builder: (context)=> EditProfil()),
               );
             },
           ),
