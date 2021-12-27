@@ -1,3 +1,4 @@
+//Amy Oevermann
 //Der Screen soll die Punkte anzeigen, wenn das Spiel beendet wurde
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';

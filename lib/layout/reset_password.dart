@@ -1,9 +1,9 @@
+//Amy Oevermann
 import 'package:flutter/material.dart';
 import 'package:project_moc/layout/widget.dart';
 import 'package:firebase_auth/firebase_auth.dart';
 import 'package:project_moc/model/user.dart';
 import 'package:project_moc/services/auth.dart';
-
 
 class ResetScreen extends StatefulWidget {
 
@@ -17,8 +17,8 @@ class _ResetScreenState extends State<ResetScreen> {
 @override
 Widget build(BuildContext context) {
   final TextEditingController emailController = TextEditingController();
- // String email = this.email;
-  //, password;
+  // String email = this.email;
+  // password;
   final auth = FirebaseAuth.instance;
 
   return Scaffold(

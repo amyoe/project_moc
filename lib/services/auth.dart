@@ -18,7 +18,7 @@ class AuthService {
   }
 
   // Stream
-  Stream<OurUser> get user {
+  Stream<OurUser?>? get user {
     return _firebaseAuth.authStateChanges().
     map(_userFromFirebase);
   }
@@ -43,8 +43,8 @@ class AuthService {
     final credential = await _firebaseAuth.createUserWithEmailAndPassword(
         email: email, password: password);
     // Neues Dokument für Firestore Storage mit der uid
-    await DatabaseService(uid: OurUser.uid)
-        .updateUserData(OurUser.email, 'tbd', 'tbd', 'tbd');
+    //await DatabaseService(uid: OurUser.uid)
+      //  .updateUserData(OurUser.email, 'tbd', 'tbd', 'tbd');
     return _userFromFirebase(credential.user);
   }
 

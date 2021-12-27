@@ -16,18 +16,18 @@ class EditProfil extends StatefulWidget {
 }
 
 class _EditProfilState extends State<EditProfil> {
-  void connectToFirebase() async {
-    final FirebaseAuth authenticate = FirebaseAuth.instance;
-    AuthResult result = await authenticate.signInWithEmailAndPassword(
-        email: email, password: password);
-    OurUser = result.OurUser;
+ void connectToFirebase() async {
+  //  final FirebaseAuth authenticate = FirebaseAuth.instance;
+   // AuthResult result = await authenticate.signInWithEmailAndPassword(
+     //   email: email, password: password);
+    //OurUser = result.OurUser;
     
-    database = DatabaseService(OurUser.uid);
+   // database = DatabaseService(OurUser.uid);
   }
 
   void initState() {
     super.initState();
-    connectToFirebase();
+   connectToFirebase();
   }
 
   final _formKey = GlobalKey<FormState>();

@@ -6,7 +6,7 @@ class DatabaseService {
   DatabaseService(this.uid);
 
   final CollectionReference userInfoCollection =
-      Firestore.instance.collection('userInfo');
+      FirebaseFirestore.instance.collection('userInfo');
 
   Future updateUserData(
     String email,
@@ -14,7 +14,7 @@ class DatabaseService {
     String vorname,
     String bio,
   ) async {
-    return await userInfoCollection.document(uid).setData({
+    return await userInfoCollection.doc(uid).set({
       'nachname': nachname,
       'vorname': vorname,
       'bio': bio,
@@ -22,16 +22,16 @@ class DatabaseService {
   }
 
   Future deleteInfo(String bio) async {
-    return await userInfoCollection.document(uid).updateData(
+    return await userInfoCollection.doc(uid).update(
       {bio: FieldValue.delete()},
     );
   }
 
-  Future checkIfUserExists() async {
-    if ((await Firestore.Data.document(uid).get()).exists) {
-      return true;
-    } else {
-      return false;
-    }
-  }
+  //Future checkIfUserExists() async {
+    //if ((await FirebaseFirestore.Data.doc(uid).get()).exists) {
+      //return true;
+   // } else {
+    //  return false;
+   // }
+ // }
 }
