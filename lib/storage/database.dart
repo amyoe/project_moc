@@ -1,28 +1,37 @@
-// Franziska Petzold
-// Code wurde auskommentiert, da die Anbindung zu Firebase nicht funktioniert
+import 'package:cloud_firestore/cloud_firestore.dart';
 
-//import 'package:cloud_firestore/cloud_firestore.dart';
-//import 'package:firebase_auth/firebase_auth.dart' as auth;
+class DatabaseService {
+  final String uid;
 
-//class DatabaseService {
- // final String userID;
+  DatabaseService(this.uid);
 
-  //DatabaseService(this.userID);
+  final CollectionReference userInfoCollection =
+      Firestore.instance.collection('userInfo');
 
-  //Future<CollectionReference<Object?>> get userInfo async {
-  //  return Firestore.instance.collection('userInfo');
- // }
+  Future updateUserData(
+    String email,
+    String nachname,
+    String vorname,
+    String bio,
+  ) async {
+    return await userInfoCollection.document(uid).setData({
+      'nachname': nachname,
+      'vorname': vorname,
+      'bio': bio,
+    });
+  }
 
-  //Future updateUserData(
-   // String email,
-   // String nachname,
-   // String vorname,
-  //  String bio,
-  //) async {
-   // return await userInfoCollection.document(uid).setData({
-   //   'nachname': nachname,
-    //  'vorname': vorname,
-    //  'bio': bio,
-   // });
-// }
-//}
+  Future deleteInfo(String bio) async {
+    return await userInfoCollection.document(uid).updateData(
+      {bio: FieldValue.delete()},
+    );
+  }
+
+  Future checkIfUserExists() async {
+    if ((await Firestore.Data.document(uid).get()).exists) {
+      return true;
+    } else {
+      return false;
+    }
+  }
+}

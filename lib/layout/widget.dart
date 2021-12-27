@@ -1,4 +1,5 @@
 // AppBar für jede View, damit Anpassungen leichter sind
+//Amy Oevermann
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
 
@@ -13,10 +14,11 @@ PreferredSizeWidget customAppBar(String title) {
 }
 
 // Global ausgelagert die Antwortkarten für QuizDuell
+//Amy Oevermann
 Widget answerCard(String text, {bool? answer}) {
   return Container(
     height: 60,
-    width: 150,
+    width: 160,
     child: Card(
       color: (answer == null)
           ? Colors.grey
@@ -25,7 +27,10 @@ Widget answerCard(String text, {bool? answer}) {
           : Colors.red,
       child: Padding(
         padding: const EdgeInsets.all(10.0),
-        child: Text(text),
+        child: Text(text,
+          textAlign: TextAlign.center,
+          style: GoogleFonts.raleway(fontSize: 15)
+        ),
       ),
     ),
   );
@@ -54,6 +59,7 @@ Widget buildPopupDialog(BuildContext context) {
 }
 
 //Icon Widget für die Settings View
+//Amy Oevermann
 class IconWidget extends StatelessWidget{
   final IconData icon;
   final Color color;

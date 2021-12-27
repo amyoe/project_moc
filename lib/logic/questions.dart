@@ -6,34 +6,34 @@ import 'package:project_moc/model/quizmodel.dart';
 
 QuizModel loadQuestion(int questionIndex){
   List<QuizModel> questionList = [QuizModel(
-      "Das flächenmäßig kleinste Bundesland in Deutschland heißt?", "Bremen", ["Nrw","Hamburg","Berlin"]),
+      "Wie viele Fakultäten hat die Hochschule Hannover?", "5", ["6","4","7"]),
 
     QuizModel(
-        "Wer hat die Mona Lisa gemalt?", "Da Vinci", ["Goethe","Van Gogh","Picasso"]),
+        "Welcher Studiengang ist nicht an der Fak. 4?", "Maschinenbau", ["BWL","IBS","Informatik"]),
 
     QuizModel(
-        "Wer wird neuer Bundeskanzler?", "Scholz", ["Baerbock","Lindner","Merkel"]),
+        "Welches Modul gibt es in Wirtschaftsinformatik nicht?", "Leadership Management", ["Wirtschaftsmathe","Data Mining","Mobile Computing"]),
 
     QuizModel(
-        "Was ist die Hauptstadt von Spanien?", "Madrid", ["Köln","Barcelona","Paris"]),
+        "Wie viele Semester studiert man IBS an der HSH?", "8", ["7","6","Gibt es gar nicht."]),
 
     QuizModel(
-        "Wo liegt New York?", "USA", ["Australien","Mexico","China"]),
+        "Wo ist kein Standort der Hoschule Hannover?", "Herrenhausen", ["Ahlem","Kleefeld","Expo Plaza"]),
 
     QuizModel(
-        "Was ist mein Lieblingshaustier?", "Hund", ["Katze","Hase","Hamster"]),
+        "Wann ist Semesterbeginn bei den Verwaltungsinformatik?", "Wintersemester", ["Sommersemester","Beides","Jedes ungerade Jahr"]),
 
     QuizModel(
-        "Wie viele Jahreszeiten gibt es?", "4", ["2","3","6"]),
+        "Welchen Studiengang kann man Berufsbegleitend studieren?", "Heilpädagogik", ["Produktdesgin","Modedesign","Mechatronik"]),
 
     QuizModel(
         "Was studieren wir?", "Wirtschaftsinformatik", ["BWL","Mathe","Lehramt"]),
 
     QuizModel(
-        "Ich mag...", "Sommer", ["Kekse","Schnee","Glühwein"]),
+        "Wie viele Studiengänge gibt es an der HSH?", "64", ["59","69","71"]),
 
     QuizModel(
-        "YouTube ist eine ... ", "Plattform", ["Suchmaschine","Schule","Online Shop"]),
+        "Wie viele Studierende gibt es insgesamt an der HSH?", "9744", ["8432","10012","8999"]),
   ];
   return questionList[questionIndex];
 }
@@ -41,34 +41,34 @@ QuizModel loadQuestion(int questionIndex){
 //Quizduell Fragen für Company Kategorie
 QuizCompanyModel loadQuestionCompany(int questionCompanyIndex){
   List<QuizCompanyModel> questionCompanyList = [QuizCompanyModel(
-      "In welcher Branche sind wir tätig?", "IT", ["Gesundheit","Mode","Finanzen"]),
+      "Wie viele Semster studieren wir?", "7", ["6","5","6 1/2"]),
 
     QuizCompanyModel(
-        "Wie viele Standorte weltweit haben wir", "9", ["5","8","6"]),
+        "In welchem Modul muss man einen Einstufungstest machen?", "Englisch", ["Wirtschaftsmathe","BWL 2","IM Projekt"]),
 
     QuizCompanyModel(
-        "Wann wurde das Unternehmen gegründet?", "1997", ["2012","2000","2001"]),
+        "Wer ist neuer Dozent in Informationsmanagement?", "Mengelkamp", ["Disterer","Neumann","Fels"]),
 
     QuizCompanyModel(
-        "Wie viele Mitarbeiter haben wir?", "578", ["100","90","600"]),
+        "Wie viele Semester beinhaltet der 1. Studienabschnitt?", "3", ["4","2","5"]),
 
     QuizCompanyModel(
-        "Wo ist unser Hauptstandort?", "Berlin", ["Hannover","Barcelona","Mailand"]),
+        "In welchem Semester absolviert man das Praktikum?", "7", ["6","4 & 7","5"]),
 
     QuizCompanyModel(
-        "Sind Hunde bei uns im Büro erlaubt?", "Ja", ["Nein","Kommt drauf an","Ja, mit Absprache"]),
+        "Wie lang soll das Pflichtpraktikum sein?", "19 Wochen", ["3 Monate","Kommt drauf an","10 Wochen"]),
 
     QuizCompanyModel(
-        "Welche Abteilung ist die lustigste?", "Marketing", ["IT","Buchhaltung","HR"]),
+        "Wie viele Module muss man im Schwerpunkt belegen?", "4", ["5","3","6"]),
 
     QuizCompanyModel(
-        "Welchen Online Kanal haben wir nicht?", "Tik Tok", ["Instagram","LinkedIn","Facebook"]),
+        "Wie viele Schwerpunkte haben wir?", "4", ["3","5","7"]),
 
     QuizCompanyModel(
-        "Wo eröffnen wir unseren nächsten Standort?", "München", ["Dortmund","Hamburg","Leipzig"]),
+        "Aus wie vielen Modulen besteht BWL 3?", "3", ["2","4","1"]),
 
     QuizCompanyModel(
-        "Was sind unsere Jahresziele?", "Umsatz verdoppeln", ["Weiter wachsen","Mehr Produzieren","Kosten sparen"]),
+        "Wie viele Ergänzungsmodule muss man belegen?", "5", ["4","3","6"]),
   ];
   return questionCompanyList[questionCompanyIndex];
 }

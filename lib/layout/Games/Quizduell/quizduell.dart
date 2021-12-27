@@ -83,6 +83,7 @@ class _QuizDuellSate extends State<QuizDuell> {
                 Text(
                   currentQuestion.question,
                   style: GoogleFonts.raleway(fontSize: 20),
+                  textAlign: TextAlign.center,
                 ),
                 Spacer(),
                 Text("Punkte: "+ userPoints.toString(),

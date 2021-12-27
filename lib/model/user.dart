@@ -28,7 +28,6 @@ class OurUser {
   //final String nachname;
   final String? email;
   //final String bio;
-
   //final String nachname;
   //final bool isProfilhidden;
   //final bool isDarkMode;

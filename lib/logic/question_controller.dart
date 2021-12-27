@@ -26,8 +26,6 @@ int getCorrectAnswerIndex(List<String> answers, String correctAnswer){
 
 //Company
 
-
-
 List<String> getQuestionCompanyRandomList(List<String> companyWrongAnswers, String companyCorrectAnswer) {
   companyWrongAnswers.add(companyCorrectAnswer);
   companyWrongAnswers.shuffle();

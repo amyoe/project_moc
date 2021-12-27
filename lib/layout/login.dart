@@ -15,7 +15,6 @@ class LoginScreen extends StatelessWidget {
     final authService = Provider.of<AuthService>(context);
    final auth = FirebaseAuth.instance;
 
-
     return Scaffold(
       appBar: customAppBar("Login"),
       body: Column(
