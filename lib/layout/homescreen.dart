@@ -1,7 +1,6 @@
 //Amy Oevermann
 import 'package:google_fonts/google_fonts.dart';
 import 'package:project_moc/layout/Compliance/compliance_schulungen.dart';
-import 'package:project_moc/layout/edit_profil.dart';
 import 'package:project_moc/layout/links.dart';
 import 'package:project_moc/layout/profil.dart';
 import 'package:project_moc/layout/settings.dart';
@@ -19,7 +18,7 @@ class HomeScreen extends StatelessWidget {
   Widget build(BuildContext context) {
     final authService = Provider.of<AuthService>(context);
     return Scaffold(
-      appBar: customAppBar("Willkommen"),
+      appBar: customAppBar("Dein Ersti-Buddy"),
       body: Center(
         child: Column(
           crossAxisAlignment: CrossAxisAlignment.center,
@@ -110,7 +109,7 @@ class _MyStatefulWidgetState extends State<MyStatefulWidget> {
             },
           ),
           Text(
-            'Hallo!',
+            'Willkommen!',
             style: GoogleFonts.raleway(fontSize: 30),
           ),
           IconButton(

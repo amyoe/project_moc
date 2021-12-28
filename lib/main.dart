@@ -4,6 +4,7 @@ import 'package:google_fonts/google_fonts.dart';
 import 'package:project_moc/services/auth.dart';
 import 'package:project_moc/services/wrapper.dart';
 import 'package:provider/provider.dart';
+import 'package:flutter_native_splash/flutter_native_splash.dart';
 import 'layout/login.dart';
 import 'layout/register.dart';
 
@@ -19,30 +20,52 @@ class MyApp extends StatelessWidget {
   // This widget is the root of your application.
   @override
   Widget build(BuildContext context) {
-    const appTitle = 'Quiz App Hochschule Hannover';
+    const appTitle = 'Dein Ersti-Buddy';
 
-    //https://www.youtube.com/watch?v=j_SJ7XmT2MM&list=PL4cUxeGkcC9j--TKIdkb3ISfRbJeJYQwC&index=8
-    // So ab Minute 3 schreibt er was dazu, sieht aber wanders aus als deins, gibt aber glaube ich die user info zurück
 
     return MultiProvider(
-      providers: [
-        Provider<AuthService>(create: (_) => AuthService(),),
-      ],
-      child: MaterialApp(
-      title: appTitle,
-      theme: ThemeData(
-        brightness: Brightness.dark,
-        primaryColor: Colors.lightBlue[800],
-        fontFamily: GoogleFonts.raleway(color:Colors.white).fontFamily,
-      ),
-        initialRoute: '/',
-        routes: {
-          '/': (context) => Wrapper(),
-          '/login': (context) => LoginScreen(),
-          '/register': (context) => RegisterScreen(),
-        },
-      ),
+        providers: [
+          Provider<AuthService>(create: (_) => AuthService(),),
+        ],
+        child: MaterialApp(
+          title: "Dein Ersti-Buddy",
+          theme: ThemeData(
+            brightness: Brightness.dark,
+            primaryColor: Colors.lightBlue[800],
+            fontFamily: GoogleFonts
+                .raleway(color: Colors.white)
+                .fontFamily,
+          ),
+          initialRoute: '/',
+          routes: {
+            '/': (context) => Wrapper(),
+            '/login': (context) => LoginScreen(),
+            '/register': (context) => RegisterScreen(),
+          },
+         // home: Splash(),
+         // debugShowCheckedModeBanner: false,
+        ),
     );
   }
 }
+
+
+// class Splash extends StatelessWidget {
+//   const Splash({Key? key}) : super(key: key);
+//
+//   @override
+//   Widget build(BuildContext context) {
+//     bool lightMode =
+//         MediaQuery.of(context).platformBrightness == Brightness.dark;
+//     return Scaffold(
+//       backgroundColor:
+//       lightMode ? const Color(0xffe1f5fe) : const Color(0xff0277bd),
+//       body: Center(
+//           child: lightMode
+//               ? Image.asset('assets/splash_screen.png')
+//               : Image.asset('assets/splash_screen.png')),
+//     );
+//   }
+// }
+
 

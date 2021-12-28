@@ -1,7 +1,7 @@
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
     package="com.example.project_moc">
    <application
-        android:label="project_moc"
+        android:label="Ersti-Buddy"
         android:icon="@mipmap/ic_launcher">
 
         <activity
