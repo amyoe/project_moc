@@ -1,8 +1,8 @@
+// Franziska Petzold
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:project_moc/logic/memory_utils.dart';
 import 'package:project_moc/layout/widget.dart';
-
 import 'info_card.dart';
 
 class Memorie extends StatefulWidget {

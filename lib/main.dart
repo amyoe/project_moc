@@ -1,12 +1,11 @@
 import 'package:flutter/material.dart';
 import 'package:firebase_core/firebase_core.dart';
-import 'package:firebase_storage/firebase_storage.dart';
+import 'package:google_fonts/google_fonts.dart';
 import 'package:project_moc/services/auth.dart';
 import 'package:project_moc/services/wrapper.dart';
 import 'package:provider/provider.dart';
 import 'layout/login.dart';
 import 'layout/register.dart';
-import 'layout/start_screen.dart';
 
 void main() async {
   WidgetsFlutterBinding.ensureInitialized();
@@ -34,7 +33,7 @@ class MyApp extends StatelessWidget {
       theme: ThemeData(
         brightness: Brightness.dark,
         primaryColor: Colors.lightBlue[800],
-        fontFamily: 'Georgia',
+        fontFamily: GoogleFonts.raleway(color:Colors.white).fontFamily,
       ),
         initialRoute: '/',
         routes: {

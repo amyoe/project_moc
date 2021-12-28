@@ -5,7 +5,6 @@ import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
 import 'package:project_moc/logic/true_false_questionbank.dart';
 import 'package:rflutter_alert/rflutter_alert.dart';
-
 import '../../widget.dart';
 
 QuizBrain quizBrain = QuizBrain();
@@ -41,9 +40,9 @@ class _QuizzlerState extends State<Quizzler> {
           context: context,
           type: AlertType.error,
           title: 'QUIZ BEENDET',
-          desc: "You have finished your quiz.",
           buttons: [
             DialogButton(
+              color: Colors.lightBlue,
               child: Text(
                 "Fertig",
                 style: GoogleFonts.raleway(fontSize: 18),

@@ -1,8 +1,6 @@
 //Franziska Petzold
-
 import 'package:flutter/material.dart';
 import 'package:project_moc/layout/widget.dart';
-import 'package:url_launcher/link.dart';
 import 'package:google_fonts/google_fonts.dart';
 import 'package:url_launcher/url_launcher.dart';
 

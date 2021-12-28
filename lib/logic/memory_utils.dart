@@ -1,3 +1,4 @@
+// Franziska Petzold
 import 'package:flutter/material.dart';
 
 class Game {

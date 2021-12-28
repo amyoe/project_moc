@@ -1,7 +1,5 @@
 //Franziska Petzold
 
-import 'package:project_moc/layout/Games/Memorie/data.dart';
-
 class TileModel {
   String imageAssetPath;
   bool isSelected = true;

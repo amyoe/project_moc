@@ -22,7 +22,7 @@ class _SettingsState extends State <Settings> {
               padding: const EdgeInsets.all(10.0),
               child: Row(
                 children:[
-                  Icon(FontAwesomeIcons.user, color: Colors.orange,
+                  Icon(FontAwesomeIcons.user, color: Colors.lightBlue,
                   ),
                   SizedBox(width: 8,),
                   Text("Account",
@@ -45,7 +45,7 @@ class _SettingsState extends State <Settings> {
               padding: const EdgeInsets.all(10.0),
               child: Row(
                 children:[
-                  Icon(FontAwesomeIcons.volumeUp, color: Colors.orange,
+                  Icon(FontAwesomeIcons.volumeUp, color: Colors.lightBlue,
                   ),
                   SizedBox(width: 8,),
                   Text("Notification",
