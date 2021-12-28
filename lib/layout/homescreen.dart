@@ -2,6 +2,7 @@
 import 'package:google_fonts/google_fonts.dart';
 import 'package:project_moc/layout/Compliance/compliance_schulungen.dart';
 import 'package:project_moc/layout/edit_profil.dart';
+import 'package:project_moc/layout/links.dart';
 import 'package:project_moc/layout/profil.dart';
 import 'package:project_moc/layout/settings.dart';
 import 'package:project_moc/layout/widget.dart';
@@ -32,16 +33,24 @@ class HomeScreen extends StatelessWidget {
                   MaterialPageRoute(builder: (context) => const GamesChoice()),
                 );
               },
-              child: const Text("Spielauswahl"),
+              child: Text("Spielauswahl",
+                  style: GoogleFonts.raleway(fontSize: 18)),
+            ),
+            const SizedBox(
+              height: 12,
             ),
             ElevatedButton(
               onPressed: () {
                 Navigator.push(
                   context,
-                  MaterialPageRoute(builder: (context) => const GamesChoice()),
+                  MaterialPageRoute(builder: (context) => const links()),
                 );
               },
-              child: const Text("Meine Organisation"),
+              child: Text("Nützliche Links",
+                  style: GoogleFonts.raleway(fontSize: 18)),
+            ),
+            const SizedBox(
+              height: 12,
             ),
             ElevatedButton(
               onPressed: () {
@@ -51,13 +60,18 @@ class HomeScreen extends StatelessWidget {
                       builder: (context) => const ComplianceOverview()),
                 );
               },
-              child: const Text("Compliance Schulung"),
+              child: Text("Compliance Schulung",
+                  style: GoogleFonts.raleway(fontSize: 18)),
+            ),
+            SizedBox(
+              height: 60,
             ),
             ElevatedButton(
               onPressed: () async {
                 await authService.signOut();
               },
-              child: const Text("Ausloggen"),
+              child:
+                  Text("Ausloggen", style: GoogleFonts.raleway(fontSize: 18)),
             ),
             Spacer(),
           ],
@@ -85,7 +99,7 @@ class _MyStatefulWidgetState extends State<MyStatefulWidget> {
           IconButton(
             icon: const Icon(
               FontAwesomeIcons.cog,
-              size: 40,
+              size: 30,
               color: Colors.blueGrey,
             ),
             onPressed: () {
@@ -96,13 +110,13 @@ class _MyStatefulWidgetState extends State<MyStatefulWidget> {
             },
           ),
           Text(
-            'Hallo User!',
-            style: GoogleFonts.raleway(fontSize: 25),
+            'Hallo!',
+            style: GoogleFonts.raleway(fontSize: 30),
           ),
           IconButton(
             icon: const Icon(
               FontAwesomeIcons.user,
-              size: 40,
+              size: 30,
               color: Colors.blueGrey,
             ),
             onPressed: () {

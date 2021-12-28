@@ -3,6 +3,7 @@ import 'package:project_moc/layout/Games/Memorie/memory.dart';
 import 'package:project_moc/layout/Games/tictoc.dart';
 import 'package:project_moc/layout/widget.dart';
 import 'package:flutter/material.dart';
+import 'package:google_fonts/google_fonts.dart';
 import 'Quizduell/quizduell_choice.dart';
 
 class GamesChoice extends StatefulWidget {
@@ -32,16 +33,24 @@ class _GamesChoiceSate extends State<GamesChoice> {
                           builder: (context) => QuizDuellChoice()),
                     );
                   },
-                  child: Text("QuizDuell"),
+                  child: Text("QuizDuell",
+                      style: GoogleFonts.raleway(fontSize: 18)),
+                ),
+                const SizedBox(
+                  height: 24,
                 ),
                 ElevatedButton(
                   onPressed: () {
                     Navigator.push(
                       context,
-                      MaterialPageRoute(builder: (context) => Memorie()),
+                      MaterialPageRoute(builder: (context) => const Memorie()),
                     );
                   },
-                  child: Text("Memorie"),
+                  child:
+                      Text("Memorie", style: GoogleFonts.raleway(fontSize: 18)),
+                ),
+                const SizedBox(
+                  height: 24,
                 ),
                 ElevatedButton(
                   onPressed: () {
@@ -50,7 +59,11 @@ class _GamesChoiceSate extends State<GamesChoice> {
                       MaterialPageRoute(builder: (context) => TicToc()),
                     );
                   },
-                  child: Text("Tik Tok"),
+                  child: Text("Tic Tac Toe",
+                      style: GoogleFonts.raleway(fontSize: 18)),
+                ),
+                const SizedBox(
+                  height: 24,
                 ),
                 const ElevatedButton(
                   onPressed: null,

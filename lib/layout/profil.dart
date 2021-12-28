@@ -53,7 +53,7 @@ class _ProfilScreenState extends State<ProfilScreen> {
                   TextFormField(
                     style: GoogleFonts.raleway(fontSize: 16),
                     keyboardType: TextInputType.datetime,
-                    decoration: InputDecoration(
+                    decoration: const InputDecoration(
                       labelText: 'Dein Geburtstag',
                       hintText: 'tt/mm/yyyy',
                       border: OutlineInputBorder(),
@@ -63,7 +63,7 @@ class _ProfilScreenState extends State<ProfilScreen> {
                   TextFormField(
                     style: GoogleFonts.raleway(fontSize: 16),
                     keyboardType: TextInputType.emailAddress,
-                    decoration: InputDecoration(
+                    decoration: const InputDecoration(
                       labelText: 'E-Mail',
                       border: OutlineInputBorder(),
                     ),
@@ -72,7 +72,7 @@ class _ProfilScreenState extends State<ProfilScreen> {
                   TextFormField(
                     style: GoogleFonts.raleway(fontSize: 16),
                     obscureText: true,
-                    decoration: InputDecoration(
+                    decoration: const InputDecoration(
                       labelText: 'Passwort',
                       border: OutlineInputBorder(),
                     ),
@@ -82,12 +82,12 @@ class _ProfilScreenState extends State<ProfilScreen> {
                     style: GoogleFonts.raleway(fontSize: 16),
                     maxLines: 5,
                     maxLength: 120,
-                    decoration: InputDecoration(
+                    decoration: const InputDecoration(
                       hintText: 'Über Dich',
                       border: OutlineInputBorder(),
                     ),
                   ),
-                  SizedBox(height: 12),
+                  const SizedBox(height: 12),
                   Row(
                     mainAxisAlignment: MainAxisAlignment.center,
                     children: <Widget>[
@@ -99,13 +99,13 @@ class _ProfilScreenState extends State<ProfilScreen> {
                           // reset() setzt alle Felder wieder auf den Initalwert zurück.
                           _formKey.currentState!.reset();
                         },
-                        child: Text('Löschen'),
+                        child: const Text('Löschen'),
                       ),
-                      SizedBox(width: 24),
+                      const SizedBox(width: 24),
                       ElevatedButton(
                         style: ElevatedButton.styleFrom(
                             primary: Colors.blue,
-                            textStyle: TextStyle(color: Colors.white)),
+                            textStyle: const TextStyle(color: Colors.white)),
                         onPressed: () {
                           // Wenn alle Validatoren der Felder gültig sind.
                           if (_formKey.currentState!.validate()) {
@@ -114,7 +114,7 @@ class _ProfilScreenState extends State<ProfilScreen> {
                             print("Deine Eingaben sind nicht gültig");
                           }
                         },
-                        child: Text('Speichern'),
+                        child: const Text('Speichern'),
                       )
                     ],
                   )

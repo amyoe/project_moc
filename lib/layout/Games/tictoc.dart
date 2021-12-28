@@ -42,7 +42,7 @@ class _TicToc extends State<TicToc> {
         .size
         .width;
     return Scaffold(
-        appBar: customAppBar("Tik Tok"),
+        appBar: customAppBar("Tic Tac Toe"),
         body: Column(
           mainAxisAlignment: MainAxisAlignment.center,
           crossAxisAlignment: CrossAxisAlignment.center,
