@@ -1,6 +1,7 @@
 //Amy Oevermann
 import 'package:project_moc/layout/Games/Memorie/memory.dart';
-import 'package:project_moc/layout/Games/tictoc.dart';
+import 'package:project_moc/layout/Games/True_False/true_false_game.dart';
+import 'package:project_moc/layout/Games/tic_tac_toe.dart';
 import 'package:project_moc/layout/widget.dart';
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
@@ -33,8 +34,8 @@ class _GamesChoiceSate extends State<GamesChoice> {
                           builder: (context) => QuizDuellChoice()),
                     );
                   },
-                  child: Text("QuizDuell",
-                      style: GoogleFonts.raleway(fontSize: 18)),
+                  child: Text("Quiz Duell",
+                      style: GoogleFonts.raleway(fontSize: 20)),
                 ),
                 const SizedBox(
                   height: 24,
@@ -47,7 +48,7 @@ class _GamesChoiceSate extends State<GamesChoice> {
                     );
                   },
                   child:
-                      Text("Memorie", style: GoogleFonts.raleway(fontSize: 18)),
+                      Text("Memorie", style: GoogleFonts.raleway(fontSize: 20)),
                 ),
                 const SizedBox(
                   height: 24,
@@ -60,14 +61,19 @@ class _GamesChoiceSate extends State<GamesChoice> {
                     );
                   },
                   child: Text("Tic Tac Toe",
-                      style: GoogleFonts.raleway(fontSize: 18)),
+                      style: GoogleFonts.raleway(fontSize: 20)),
                 ),
                 const SizedBox(
                   height: 24,
                 ),
-                const ElevatedButton(
-                  onPressed: null,
-                  child: Text("Stadt-Land-Fluss"),
+                 ElevatedButton(
+                  onPressed: () {
+                    Navigator.push(
+                      context,
+                      MaterialPageRoute(builder: (context) => Quizzler()),
+                    );
+                  },
+                  child: Text("True or False",style: GoogleFonts.raleway(fontSize: 20)),
                 ),
               ],
             ),

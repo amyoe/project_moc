@@ -45,19 +45,20 @@ class _linksState extends State<links> {
                 ),
                 ElevatedButton(
                   onPressed: () {
-                    _launchURL(
-                        "https://moodle.hs-hannover.de/login/index.php");
+                    _launchURL("https://moodle.hs-hannover.de/login/index.php");
                   },
-                  child: Text("Moodle", style: GoogleFonts.raleway(fontSize: 18)),
-                ),const SizedBox(
+                  child:
+                      Text("Moodle", style: GoogleFonts.raleway(fontSize: 18)),
+                ),
+                const SizedBox(
                   height: 24,
                 ),
                 ElevatedButton(
                   onPressed: () {
                     _launchURL(
-                        "https://www.hs-hannover.de/ueber-uns/organisation/akademische-angelegenheiten/studierende/semesterbeitrag-und-rueckmeldung/");
+                        "https://f4.hs-hannover.de/studium/plaene-und-termine/pruefungsplan/abteilung-wirtschaftsinformatik/");
                   },
-                  child: Text("Semesterbeiträge & Rückmeldungen",
+                  child: Text("Prüfungsplan - WI",
                       style: GoogleFonts.raleway(fontSize: 18)),
                 ),
                 const SizedBox(
@@ -68,7 +69,18 @@ class _linksState extends State<links> {
                     _launchURL(
                         "https://f4.hs-hannover.de/studium/plaene-und-termine/stundenplan/abteilung-wirtschaftsinformatik/");
                   },
-                  child: Text("Stundenpläne - Wirtschaftsinformatik",
+                  child: Text("Stundenpläne - WI",
+                      style: GoogleFonts.raleway(fontSize: 18)),
+                ),
+                const SizedBox(
+                  height: 24,
+                ),
+                ElevatedButton(
+                  onPressed: () {
+                    _launchURL(
+                        "https://www.hs-hannover.de/ueber-uns/organisation/akademische-angelegenheiten/studierende/semesterbeitrag-und-rueckmeldung/");
+                  },
+                  child: Text("Semesterbeiträge & Rückmeldungen",
                       style: GoogleFonts.raleway(fontSize: 18)),
                 ),
                 const SizedBox(

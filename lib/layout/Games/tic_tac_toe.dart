@@ -1,5 +1,6 @@
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
+import 'package:google_fonts/google_fonts.dart';
 import 'package:project_moc/layout/widget.dart';
 import 'package:project_moc/logic/tictoc_utils.dart';
 
@@ -15,16 +16,7 @@ class _TicToc extends State<TicToc> {
   bool gameOver = false;
   int turn = 0; // to check the draw
   String result = "";
-  List<int> scoreboard = [
-    0,
-    0,
-    0,
-    0,
-    0,
-    0,
-    0,
-    0
-  ];
+  List<int> scoreboard = [0, 0, 0, 0, 0, 0, 0, 0];
 
   Game game = Game();
 
@@ -37,10 +29,7 @@ class _TicToc extends State<TicToc> {
 
   @override
   Widget build(BuildContext context) {
-    double boardWidth = MediaQuery
-        .of(context)
-        .size
-        .width;
+    double boardWidth = MediaQuery.of(context).size.width;
     return Scaffold(
         appBar: customAppBar("Tic Tac Toe"),
         body: Column(
@@ -52,10 +41,8 @@ class _TicToc extends State<TicToc> {
             ),
             Text(
               "${lastValue} ist dran!".toUpperCase(),
-              style: const TextStyle(
-                color: Colors.white,
-                fontSize: 30,
-              ),
+              style: GoogleFonts.raleway(
+                  fontSize: 20, fontWeight: FontWeight.w500),
             ),
             const SizedBox(
               height: 24.0,
@@ -66,57 +53,57 @@ class _TicToc extends State<TicToc> {
               width: boardWidth,
               height: boardWidth,
               child: GridView.count(
-                crossAxisCount: Game.boardlenth ~/
-                    3,
+                crossAxisCount: Game.boardlenth ~/ 3,
                 // the ~/ operator allows you to evide to integer and return an Int as a result
-                padding: EdgeInsets.all(5.0),
-                mainAxisSpacing: 8.0,
-                crossAxisSpacing: 8.0,
+                padding: const EdgeInsets.all(10.0),
+                mainAxisSpacing: 5.0,
+                crossAxisSpacing: 5.0,
                 children: List.generate(Game.boardlenth, (index) {
                   return InkWell(
                     onTap: gameOver
                         ? null
                         : () {
-                      //when we click we need to add the new value to the board and refrech the screen
-                      //we need also to toggle the player
-                      //now we need to apply the click only if the field is empty
-                      //now let's create a button to repeat the game
+                            //when we click we need to add the new value to the board and refrech the screen
+                            //we need also to toggle the player
+                            //now we need to apply the click only if the field is empty
+                            //now let's create a button to repeat the game
 
-                      if (game.board![index] == "") {
-                        setState(() {
-                          game.board![index] = lastValue;
-                          turn++;
-                          gameOver = game.winnerCheck(
-                              lastValue, index, scoreboard, 3);
+                            if (game.board![index] == "") {
+                              setState(() {
+                                game.board![index] = lastValue;
+                                turn++;
+                                gameOver = game.winnerCheck(
+                                    lastValue, index, scoreboard, 3);
 
-                          if (gameOver) {
-                            result = "$lastValue gewinnt!";
-                          } else if (!gameOver && turn == 9) {
-                            result = "Unentschieden!";
-                            gameOver = true;
-                          }
-                          if (lastValue == "X")
-                            lastValue = "O";
-                          else
-                            lastValue = "X";
-                        });
-                      }
-                    },
+                                if (gameOver) {
+                                  result = "$lastValue gewinnt!";
+                                } else if (!gameOver && turn == 9) {
+                                  result = "Unentschieden!";
+                                  gameOver = true;
+                                }
+                                if (lastValue == "X")
+                                  lastValue = "O";
+                                else
+                                  lastValue = "X";
+                              });
+                            }
+                          },
                     child: Container(
                       width: Game.blocSize,
                       height: Game.blocSize,
                       decoration: BoxDecoration(
                         borderRadius: BorderRadius.circular(4.0),
-                        color: Colors.lightBlue[200],
+                        color: Colors.white70 ,
                       ),
                       child: Center(
                         child: Text(
                           game.board![index],
-                          style: TextStyle(
+                          style: GoogleFonts.raleway(
                             color: game.board![index] == "X"
-                                ? Colors.white
-                                : Colors.pink,
-                            fontSize: 64.0,
+                                ? Colors.black
+                                : Colors.red,
+                            fontSize: 80.0,
+                            fontWeight: FontWeight.w800,
                           ),
                         ),
                       ),
@@ -125,12 +112,14 @@ class _TicToc extends State<TicToc> {
                 }),
               ),
             ),
-            SizedBox(
+            const SizedBox(
               height: 12.0,
             ),
-            Text(
-              result,
-              style: TextStyle(color: Colors.white, fontSize: 30.0),
+            Text(result,
+                style: GoogleFonts.raleway(
+                    fontSize: 30, fontWeight: FontWeight.w700)),
+            const SizedBox(
+              height: 12,
             ),
             ElevatedButton.icon(
               onPressed: () {
@@ -145,7 +134,9 @@ class _TicToc extends State<TicToc> {
                 });
               },
               icon: Icon(Icons.replay),
-              label: Text("Nochmal"),
+              label: Text("Nochmal",
+                  style: GoogleFonts.raleway(
+                      fontSize: 15, fontWeight: FontWeight.w400)),
             ),
           ],
         ));

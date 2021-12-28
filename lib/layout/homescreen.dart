@@ -63,7 +63,7 @@ class HomeScreen extends StatelessWidget {
               child: Text("Compliance Schulung",
                   style: GoogleFonts.raleway(fontSize: 18)),
             ),
-            SizedBox(
+            const SizedBox(
               height: 60,
             ),
             ElevatedButton(
@@ -92,7 +92,7 @@ class _MyStatefulWidgetState extends State<MyStatefulWidget> {
   @override
   Widget build(BuildContext context) {
     return Padding(
-      padding: const EdgeInsets.only(top: 15.0),
+      padding: const EdgeInsets.only(top: 25.0),
       child: Row(
         mainAxisAlignment: MainAxisAlignment.spaceBetween,
         children: <Widget>[
