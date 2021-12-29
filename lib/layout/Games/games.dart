@@ -6,6 +6,7 @@ import 'package:project_moc/layout/widget.dart';
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
 import 'Quizduell/quizduell_choice.dart';
+import 'package:flutter/cupertino.dart';
 
 class GamesChoice extends StatefulWidget {
   const GamesChoice({Key? key}) : super(key: key);

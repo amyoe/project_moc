@@ -10,6 +10,7 @@ import 'package:font_awesome_flutter/font_awesome_flutter.dart';
 import 'package:project_moc/layout/Games/games.dart';
 import 'package:project_moc/services/auth.dart';
 import 'package:provider/provider.dart';
+import 'package:flutter/cupertino.dart';
 
 class HomeScreen extends StatelessWidget {
   const HomeScreen({Key? key}) : super(key: key);
@@ -23,7 +24,7 @@ class HomeScreen extends StatelessWidget {
         child: Column(
           crossAxisAlignment: CrossAxisAlignment.center,
           children: [
-            MyStatefulWidget(),
+            StartingWidget(),
             Spacer(),
             ElevatedButton(
               onPressed: () {
@@ -80,18 +81,18 @@ class HomeScreen extends StatelessWidget {
   }
 }
 
-class MyStatefulWidget extends StatefulWidget {
-  const MyStatefulWidget({Key? key}) : super(key: key);
+class StartingWidget extends StatefulWidget {
+  const StartingWidget({Key? key}) : super(key: key);
 
   @override
-  State<MyStatefulWidget> createState() => _MyStatefulWidgetState();
+  State<StartingWidget> createState() => _StartingWidgetState();
 }
 
-class _MyStatefulWidgetState extends State<MyStatefulWidget> {
+class _StartingWidgetState extends State<StartingWidget> {
   @override
   Widget build(BuildContext context) {
     return Padding(
-      padding: const EdgeInsets.only(top: 25.0),
+      padding: const EdgeInsets.only(top: 18.0),
       child: Row(
         mainAxisAlignment: MainAxisAlignment.spaceBetween,
         children: <Widget>[

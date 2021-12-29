@@ -1,8 +1,7 @@
-import 'package:project_moc/layout/Games/games.dart';
 import 'package:project_moc/layout/widget.dart';
 import 'package:flutter/material.dart';
+import 'package:flutter/cupertino.dart';
 import 'package:google_fonts/google_fonts.dart';
-import 'package:project_moc/layout/homescreen.dart';
 
 class ProfilScreen extends StatefulWidget {
   @override

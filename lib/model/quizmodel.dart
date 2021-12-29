@@ -8,7 +8,7 @@ class QuizModel {
   QuizModel(this.question, this.correctAnswer, this.wrongAnswers);
 }
 
-//Klasse für die Unternehmensfragen
+//Klasse für die Hochschul Fragen
 class QuizCompanyModel {
   String companyQuestion;
   String companyCorrectAnswer;

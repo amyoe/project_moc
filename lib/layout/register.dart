@@ -3,6 +3,7 @@ import 'package:flutter/material.dart';
 import 'package:project_moc/layout/widget.dart';
 import 'package:project_moc/services/auth.dart';
 import 'package:provider/provider.dart';
+import 'package:flutter/cupertino.dart';
 
 class RegisterScreen extends StatelessWidget {
   const RegisterScreen({

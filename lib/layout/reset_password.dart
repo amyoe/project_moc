@@ -4,6 +4,7 @@ import 'package:project_moc/layout/widget.dart';
 import 'package:firebase_auth/firebase_auth.dart';
 import 'package:project_moc/model/user.dart';
 import 'package:project_moc/services/auth.dart';
+import 'package:flutter/cupertino.dart';
 
 class ResetScreen extends StatefulWidget {
 

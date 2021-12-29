@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:flutter/cupertino.dart';
 import 'package:firebase_core/firebase_core.dart';
 import 'package:google_fonts/google_fonts.dart';
 import 'package:project_moc/services/auth.dart';
@@ -7,6 +8,7 @@ import 'package:provider/provider.dart';
 import 'package:flutter_native_splash/flutter_native_splash.dart';
 import 'layout/login.dart';
 import 'layout/register.dart';
+import 'package:flutter/cupertino.dart';
 
 void main() async {
   WidgetsFlutterBinding.ensureInitialized();
@@ -17,11 +19,9 @@ void main() async {
 class MyApp extends StatelessWidget {
   const MyApp({Key? key}) : super(key: key);
 
-  // This widget is the root of your application.
   @override
   Widget build(BuildContext context) {
     const appTitle = 'Dein Ersti-Buddy';
-
 
     return MultiProvider(
         providers: [
@@ -48,7 +48,6 @@ class MyApp extends StatelessWidget {
     );
   }
 }
-
 
 // class Splash extends StatelessWidget {
 //   const Splash({Key? key}) : super(key: key);

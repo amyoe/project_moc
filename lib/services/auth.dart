@@ -1,14 +1,11 @@
-import 'package:firebase_auth/firebase_auth.dart';
+//Amy Oevermannn
 import 'package:firebase_auth/firebase_auth.dart' as auth;
 import 'package:project_moc/model/user.dart';
-import 'package:firebase_core/firebase_core.dart';
-import 'package:project_moc/storage/database.dart';
-import 'package:project_moc/storage/database.dart';
 
 class AuthService {
   final auth.FirebaseAuth _firebaseAuth = auth.FirebaseAuth.instance;
 
-  // Neues User-Objekt
+  // Neues User-Objekt erstellen
   OurUser? _userFromFirebase(auth.User? user) {
     if (user == null) {
       return null;
@@ -34,7 +31,7 @@ class AuthService {
     return _userFromFirebase(credential.user);
   }
 
-  // Registrierung
+  // Registrierung mit EMail und Passwort
   Future<OurUser?> createUserWithEmailAndPassword(
       String email,
       String password,
@@ -50,6 +47,11 @@ class AuthService {
   // Abmelden
   Future<void> signOut() async {
     return await _firebaseAuth.signOut();
+  }
+
+  //Passwort reset
+  Future <void> sendPasswordResetEmail(String email) async {
+    return _firebaseAuth.sendPasswordResetEmail(email: email);
   }
 
 // User Objekt auf Basis von Firebase

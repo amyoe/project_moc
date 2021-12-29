@@ -7,6 +7,7 @@ import 'package:flutter/material.dart';
 import 'package:project_moc/model/quizmodel.dart';
 import 'package:step_progress_indicator/step_progress_indicator.dart';
 import 'endscreen_quizduell.dart';
+import 'package:flutter/cupertino.dart';
 
 class QuizDuellCompany extends StatefulWidget{
   const QuizDuellCompany({Key? key}) : super(key: key);
