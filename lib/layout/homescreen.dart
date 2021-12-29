@@ -1,10 +1,9 @@
 //Amy Oevermann
 import 'package:google_fonts/google_fonts.dart';
 import 'package:project_moc/layout/Compliance/compliance_schulungen.dart';
+import 'package:project_moc/layout/Notizen/note_screen.dart';
 import 'package:project_moc/layout/about_hannover.dart';
 import 'package:project_moc/layout/links.dart';
-import 'package:project_moc/layout/notes/list_view.dart';
-import 'package:project_moc/layout/notes/welcome_notes.dart';
 import 'package:project_moc/layout/profil.dart';
 import 'package:project_moc/layout/settings.dart';
 import 'package:project_moc/layout/widget.dart';
@@ -78,7 +77,7 @@ class HomeScreen extends StatelessWidget {
                   Navigator.push(
                     context,
                     MaterialPageRoute(
-                        builder: (context) => WelcomeNotes()),
+                        builder: (context) => NoteView()),
                   );
                 },
                 child: Text("Notizen",
