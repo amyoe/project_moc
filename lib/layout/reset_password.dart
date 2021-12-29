@@ -42,7 +42,7 @@ class _ResetScreenState extends State<ResetScreen> {
               auth.sendPasswordResetEmail(email: email);
               Navigator.of(context).pop;
             },
-            child: Text("Password zurücksetzen"),
+            child: Text("Passwort zurücksetzen"),
           ),
         ],
       ),

@@ -1,3 +1,4 @@
+// Franziska Petzold
 import 'package:flutter/material.dart';
 import 'package:project_moc/model/notiz_model.dart';
 import 'package:sqflite/sqflite.dart';

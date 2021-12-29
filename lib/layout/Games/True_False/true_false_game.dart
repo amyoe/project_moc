@@ -3,6 +3,7 @@
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
+import 'package:project_moc/layout/Games/games.dart';
 import 'package:project_moc/logic/true_false_questionbank.dart';
 import 'package:rflutter_alert/rflutter_alert.dart';
 import '../../widget.dart';
@@ -47,7 +48,8 @@ class _QuizzlerState extends State<Quizzler> {
                 "Fertig",
                 style: GoogleFonts.raleway(fontSize: 18),
               ),
-              onPressed: () => Navigator.pop(context),
+              onPressed: () => Navigator.push(
+                  context, MaterialPageRoute(builder: (context) => GamesChoice())),
               width: 120,
             )
           ],

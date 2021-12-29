@@ -1,8 +1,10 @@
+// Franziska Petzold
 import 'package:flutter/material.dart';
 import 'package:project_moc/layout/widget.dart';
 import 'package:project_moc/model/notiz_model.dart';
 import 'package:project_moc/storage/database_helper.dart';
 
+// Notiz aktualisieren
 
 class UpdateNoteScreen extends StatefulWidget {
   final String title;

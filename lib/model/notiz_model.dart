@@ -1,3 +1,4 @@
+// Franziska Petzold
 class Note {
   final int? id;
   final String title;

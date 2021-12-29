@@ -1,6 +1,7 @@
 //Amy Oevermann
 import 'package:google_fonts/google_fonts.dart';
 import 'package:project_moc/layout/Compliance/compliance_schulungen.dart';
+import 'package:project_moc/layout/Notizen/note_detail.dart';
 import 'package:project_moc/layout/Notizen/note_screen.dart';
 import 'package:project_moc/layout/about_hannover.dart';
 import 'package:project_moc/layout/links.dart';
@@ -77,7 +78,7 @@ class HomeScreen extends StatelessWidget {
                   Navigator.push(
                     context,
                     MaterialPageRoute(
-                        builder: (context) => NoteView()),
+                        builder: (context) => NoteDetailsScreen()),
                   );
                 },
                 child: Text("Notizen",
@@ -90,6 +91,9 @@ class HomeScreen extends StatelessWidget {
                 },
                 child:
                     Text("Ausloggen", style: GoogleFonts.raleway(fontSize: 18)),
+              ),
+              const SizedBox(
+                height: 24,
               ),
             ],
           ),

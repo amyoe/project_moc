@@ -1,9 +1,13 @@
+// Franziska Petzold
 import 'package:flutter/material.dart';
 import 'package:project_moc/layout/Notizen/note_detail.dart';
+import 'package:project_moc/layout/widget.dart';
 import 'package:project_moc/logic/note_controller.dart';
 import 'package:project_moc/model/notiz_model.dart';
 import 'package:project_moc/storage/database_helper.dart';
 import 'package:provider/provider.dart';
+
+// Neue Notiz erstellen
 
 class NoteView extends StatelessWidget {
    NoteView({Key? key}) : super(key: key);
@@ -15,26 +19,7 @@ class NoteView extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      appBar: AppBar(
-        title: const Text('Neue Notiz'),
-        centerTitle: true,
-        actions: [
-          TextButton(
-            onPressed: () async {
-              Navigator.of(context).push(
-                MaterialPageRoute(
-                  builder: (context) => ChangeNotifierProvider(
-                    create: (context) => NoteController(),
-                    child: const NoteDetailsScreen(),
-                  ),
-                ),
-              );
-            },
-            child:
-            const Text('Speichern', style: TextStyle(color: Colors.white)),
-          )
-        ],
-      ),
+      appBar: customAppBar("Neue Notiz"),
       body: Center(
         child: Container(
           margin: const EdgeInsets.symmetric(horizontal: 14.0, vertical: 8.0),

@@ -39,7 +39,10 @@ class _linksState extends State<links> {
                     _launchURL(
                         "https://icms.hs-hannover.de/qisserver/rds?state=user&type=0");
                   },
-                  child: const Text("iCMS"),
+                  child:const Align(
+                    alignment: Alignment.center,
+                    child: Text("iCMS"),
+                  )
                 ),
                 const SizedBox(
                   height: 12,

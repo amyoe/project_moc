@@ -1,6 +1,8 @@
 // Franziska Petzold
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
+import 'package:font_awesome_flutter/font_awesome_flutter.dart';
+import 'package:project_moc/layout/homescreen.dart';
 import 'package:project_moc/logic/memory_utils.dart';
 import 'package:project_moc/layout/widget.dart';
 import 'info_card.dart';
@@ -82,7 +84,7 @@ class _MemorieState extends State<Memorie> {
 
                             Future.delayed(const Duration(milliseconds: 500),
                                 () {
-                             // print(_game.gameColors);
+                              // print(_game.gameColors);
                               setState(() {
                                 _game.gameImg![_game.matchCheck[0].keys.first] =
                                     _game.hiddenCardpath;
@@ -108,6 +110,13 @@ class _MemorieState extends State<Memorie> {
                     );
                   }))
         ],
+      ),
+      floatingActionButton: FloatingActionButton(
+        child: const Icon(FontAwesomeIcons.home),
+        onPressed: () => Navigator.push(
+            context, MaterialPageRoute(builder: (context) => HomeScreen())),
+        foregroundColor: Colors.white,
+        backgroundColor: Colors.lightBlue,
       ),
     );
   }
