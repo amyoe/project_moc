@@ -19,7 +19,10 @@ class _GamesChoiceSate extends State<GamesChoice> {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: customAppBar("Spiele"),
-      body: Container(
+      body: Container(decoration: const BoxDecoration(
+          image: DecorationImage(
+              image: AssetImage("assets/images/wuerfel.png"),
+              fit: BoxFit.fitWidth)),
         child: Center(
           child: Padding(
             padding: const EdgeInsets.all(10.0),

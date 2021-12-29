@@ -68,10 +68,13 @@ class _QuizzlerState extends State<Quizzler> {
           children: [
             Expanded(
               flex: 5,
-              child: Center(
-                child: Text(quizBrain.getQuestionText(),
-                    textAlign: TextAlign.center,
-                    style: GoogleFonts.raleway(fontSize: 25)),
+              child: Padding(
+                padding: const EdgeInsets.all(15.0),
+                child: Center(
+                  child: Text(quizBrain.getQuestionText(),
+                      textAlign: TextAlign.center,
+                      style: GoogleFonts.raleway(fontSize: 25)),
+                ),
               ),
             ),
             Expanded(
