@@ -7,6 +7,7 @@ import 'package:flutter/material.dart';
 import 'package:project_moc/model/quizmodel.dart';
 import 'package:step_progress_indicator/step_progress_indicator.dart';
 import 'endscreen_quizduell.dart';
+import 'package:flutter/cupertino.dart';
 
 class QuizDuell extends StatefulWidget{
   const QuizDuell({Key? key}) : super(key: key);
@@ -17,7 +18,6 @@ class QuizDuell extends StatefulWidget{
 
 class _QuizDuellSate extends State<QuizDuell> {
 
-  //late verwenden, da ich es nicht jetzt initalisiere, sondern später
   int currentLevel = 1;
   int userPoints = 0;
   late QuizModel currentQuestion;
@@ -50,7 +50,7 @@ class _QuizDuellSate extends State<QuizDuell> {
         answerValidation[userAnswerIndex] = false;
       }
     });
-    
+    //Neue Fragen wird nach 2 Sekunden geladen, solange das Level nicht größer als 10 ist
     await Future.delayed(Duration(seconds: 2));
     currentLevel++;
     if (currentLevel<=10) {

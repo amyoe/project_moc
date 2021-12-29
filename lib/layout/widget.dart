@@ -1,8 +1,9 @@
-// AppBar für jede View, damit Anpassungen leichter sind
-//Amy Oevermann
 import 'package:flutter/material.dart';
+import 'package:flutter/cupertino.dart';
 import 'package:google_fonts/google_fonts.dart';
 
+//Amy Oevermann
+// AppBar für jede View, damit Anpassungen leichter sind
 PreferredSizeWidget customAppBar(String title) {
   return AppBar(
     centerTitle: true,
@@ -13,7 +14,7 @@ PreferredSizeWidget customAppBar(String title) {
   );
 }
 
-// Global ausgelagert die Antwortkarten für QuizDuell
+//Antwortkarten für QuizDuell ausgelagert
 //Amy Oevermann
 Widget answerCard(String text, {bool? answer}) {
   return Container(

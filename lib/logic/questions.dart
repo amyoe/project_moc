@@ -5,7 +5,8 @@
 import 'package:project_moc/model/quizmodel.dart';
 
 QuizModel loadQuestion(int questionIndex){
-  List<QuizModel> questionList = [QuizModel(
+  List<QuizModel> questionList = [
+    QuizModel(
       "Wie viele Fakultäten hat die Hochschule Hannover?", "5", ["6","4","7"]),
 
     QuizModel(
@@ -38,7 +39,7 @@ QuizModel loadQuestion(int questionIndex){
   return questionList[questionIndex];
 }
 
-//Quizduell Fragen für Company Kategorie
+//Quizduell Fragen für Hochschule
 QuizCompanyModel loadQuestionCompany(int questionCompanyIndex){
   List<QuizCompanyModel> questionCompanyList = [QuizCompanyModel(
       "Wie viele Semster studieren wir?", "7", ["6","5","6 1/2"]),

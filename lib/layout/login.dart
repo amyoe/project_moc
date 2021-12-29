@@ -5,6 +5,7 @@ import 'package:project_moc/layout/widget.dart';
 import 'package:project_moc/services/auth.dart';
 import 'package:provider/provider.dart';
 import 'package:firebase_auth/firebase_auth.dart';
+import 'package:flutter/cupertino.dart';
 
 class LoginScreen extends StatelessWidget {
   const LoginScreen({
@@ -17,6 +18,7 @@ class LoginScreen extends StatelessWidget {
     final TextEditingController passwordController = TextEditingController();
     final authService = Provider.of<AuthService>(context);
     final auth = FirebaseAuth.instance;
+    //String email = email;
 
     return Scaffold(
       appBar: customAppBar("Login"),
@@ -71,7 +73,7 @@ class LoginScreen extends StatelessWidget {
           ),
           TextButton(
             onPressed: () {
-              // auth.sendPasswordResetEmail(email: OurUser.email);
+             // auth.sendPasswordResetEmail(email: email);
               Navigator.of(context).pop;
             },
             child: const Text("Passwort zurücksetzen"),

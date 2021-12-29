@@ -4,6 +4,7 @@ import 'package:project_moc/layout/Games/Quizduell/quizduell.dart';
 import 'package:project_moc/layout/Games/Quizduell/quizduell_company.dart';
 import 'package:project_moc/layout/widget.dart';
 import 'package:flutter/material.dart';
+import 'package:flutter/cupertino.dart';
 
 class QuizDuellChoice extends StatelessWidget{
   @override
