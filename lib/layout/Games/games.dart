@@ -32,6 +32,11 @@ class _GamesChoiceSate extends State<GamesChoice> {
               mainAxisAlignment: MainAxisAlignment.center,
               children: [
                 const Spacer(),
+                const Text(
+                  "Da das Studentenleben auch Spaß machen soll, haben wir dir hier was für die Langeweile bereitgestellt.",
+                  textAlign: TextAlign.center,
+                ),
+                const Spacer(),
                 ElevatedButton(
                   onPressed: () {
                     Navigator.push(

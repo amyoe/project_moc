@@ -37,6 +37,7 @@ class MyApp extends StatelessWidget {
           primaryColor: Colors.lightBlue[800],
           fontFamily: GoogleFonts.raleway(
             color: Colors.white,
+            fontSize: 35,
           ).fontFamily,
         ),
         initialRoute: '/',

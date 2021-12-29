@@ -31,6 +31,12 @@ class _linksState extends State<links> {
             child: Column(
               mainAxisAlignment: MainAxisAlignment.center,
               children: [
+              const SizedBox(
+              height: 12),
+                const Text(
+                  "Hier haben wir dir eine Reihe von nützlichen Links zur Verfügung gestellt.",
+                  textAlign: TextAlign.center,
+                ),
                 const SizedBox(
                   height: 12,
                 ),
