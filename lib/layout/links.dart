@@ -1,7 +1,6 @@
 //Franziska Petzold
 import 'package:flutter/material.dart';
 import 'package:project_moc/layout/widget.dart';
-import 'package:google_fonts/google_fonts.dart';
 import 'package:url_launcher/url_launcher.dart';
 
 class links extends StatefulWidget {
@@ -23,11 +22,11 @@ class _linksState extends State<links> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      appBar: customAppBar("Nützliche Links"),
-      body: Container(
-        child: Center(
+        appBar: customAppBar("Nützliche Links"),
+        body: SingleChildScrollView(
           child: Padding(
-            padding: const EdgeInsets.all(10.0),
+            padding:
+                const EdgeInsets.symmetric(vertical: 10.0, horizontal: 65.0),
             child: Column(
               mainAxisAlignment: MainAxisAlignment.center,
               children: [
@@ -36,7 +35,7 @@ class _linksState extends State<links> {
                     _launchURL(
                         "https://icms.hs-hannover.de/qisserver/rds?state=user&type=0");
                   },
-                  child: Text("iCMS", style: GoogleFonts.raleway(fontSize: 18)),
+                  child: const Text("iCMS"),
                 ),
                 const SizedBox(
                   height: 24,
@@ -45,9 +44,19 @@ class _linksState extends State<links> {
                   onPressed: () {
                     _launchURL("https://moodle.hs-hannover.de/login/index.php");
                   },
-                  child:
-                      Text("Moodle", style: GoogleFonts.raleway(fontSize: 18)),
+                  child: const Text(
+                    "Moodle",
+                  ),
                 ),
+                const SizedBox(
+                  height: 24,
+                ),
+                ElevatedButton(
+                    onPressed: () {
+                      _launchURL(
+                          "https://www.studentenwerk-hannover.de/essen/mensen-und-cafes");
+                    },
+                    child: const Text("Mensa")),
                 const SizedBox(
                   height: 24,
                 ),
@@ -56,8 +65,7 @@ class _linksState extends State<links> {
                     _launchURL(
                         "https://f4.hs-hannover.de/studium/plaene-und-termine/pruefungsplan/abteilung-wirtschaftsinformatik/");
                   },
-                  child: Text("Prüfungsplan - WI",
-                      style: GoogleFonts.raleway(fontSize: 18)),
+                  child: const Text("Prüfungsplan - WI"),
                 ),
                 const SizedBox(
                   height: 24,
@@ -67,8 +75,7 @@ class _linksState extends State<links> {
                     _launchURL(
                         "https://f4.hs-hannover.de/studium/plaene-und-termine/stundenplan/abteilung-wirtschaftsinformatik/");
                   },
-                  child: Text("Stundenpläne - WI",
-                      style: GoogleFonts.raleway(fontSize: 18)),
+                  child: const Text("Stundenpläne - WI"),
                 ),
                 const SizedBox(
                   height: 24,
@@ -78,8 +85,17 @@ class _linksState extends State<links> {
                     _launchURL(
                         "https://www.hs-hannover.de/ueber-uns/organisation/akademische-angelegenheiten/studierende/semesterbeitrag-und-rueckmeldung/");
                   },
-                  child: Text("Semesterbeiträge & Rückmeldungen",
-                      style: GoogleFonts.raleway(fontSize: 18)),
+                  child: const Text("Semesterbeiträge & Rückmeldungen"),
+                ),
+                const SizedBox(
+                  height: 24,
+                ),
+                ElevatedButton(
+                  onPressed: () {
+                    _launchURL(
+                        "https://f4.hs-hannover.de/aktuelles/praktikumsstellen/");
+                  },
+                  child: const Text("Praktikumsstellen"),
                 ),
                 const SizedBox(
                   height: 24,
@@ -89,8 +105,16 @@ class _linksState extends State<links> {
                     _launchURL(
                         "https://www.hs-hannover.de/ueber-uns/organisation/gebaeudemanagement/standorte/standorte-und-anfahrt/");
                   },
-                  child: Text("Standorte und Anfahrt",
-                      style: GoogleFonts.raleway(fontSize: 18)),
+                  child: const Text("Standorte und Anfahrt"),
+                ),
+                const SizedBox(
+                  height: 24,
+                ),
+                ElevatedButton(
+                  onPressed: () {
+                    _launchURL("http://opac.tib.eu/DB=4/LNG=DU/");
+                  },
+                  child: const Text("Bibliothek"),
                 ),
                 const SizedBox(
                   height: 24,
@@ -98,8 +122,6 @@ class _linksState extends State<links> {
               ],
             ),
           ),
-        ),
-      ),
-    );
+        ));
   }
 }

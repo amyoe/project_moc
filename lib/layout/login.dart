@@ -35,7 +35,7 @@ class LoginScreen extends StatelessWidget {
             height: 180,
           ),
           Padding(
-            padding: EdgeInsets.all(8.0),
+            padding: const EdgeInsets.all(8.0),
             child: TextField(
               controller: emailController,
               decoration: const InputDecoration(
@@ -44,7 +44,7 @@ class LoginScreen extends StatelessWidget {
             ),
           ),
           Padding(
-            padding: EdgeInsets.all(8.0),
+            padding: const EdgeInsets.all(8.0),
             child: TextField(
               controller: passwordController,
               decoration: const InputDecoration(
@@ -63,20 +63,20 @@ class LoginScreen extends StatelessWidget {
                 passwordController.text,
               );
             },
-            child: Text("Login"),
+            child: const Text("Login"),
           ),
           ElevatedButton(
             onPressed: () {
               Navigator.pushNamed(context, '/register');
             },
-            child: Text("Registieren"),
+            child: const Text("Registieren"),
           ),
           TextButton(
             onPressed: () {
              // auth.sendPasswordResetEmail(email: email);
               Navigator.of(context).pop;
             },
-            child: Text("Passwort zurücksetzen"),
+            child: const Text("Passwort zurücksetzen"),
           ),
         ],
       ),
