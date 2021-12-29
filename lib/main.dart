@@ -1,12 +1,10 @@
 import 'package:flutter/material.dart';
 import 'package:firebase_core/firebase_core.dart';
 import 'package:google_fonts/google_fonts.dart';
-import 'package:project_moc/layout/notes/list_view.dart';
 import 'package:project_moc/services/auth.dart';
 import 'package:project_moc/services/wrapper.dart';
 import 'package:project_moc/storage/data.dart';
 import 'package:provider/provider.dart';
-//import 'package:flutter_native_splash/flutter_native_splash.dart';
 import 'layout/login.dart';
 import 'layout/register.dart';
 
