@@ -71,7 +71,37 @@ class _AboutHannoverState extends State<AboutHannover> {
                             ),
                           ),
                         )),
-                    const SizedBox(height: 24),
+                    const SizedBox(height: 12),
+                    ElevatedButton(
+                        onPressed: () {
+                          _launchURL("https://www.hannover.de/");
+                        },
+                        child: Align(
+                          alignment: Alignment.center,
+                          child: Text(
+                            "Stadt Hannover",
+                            style: GoogleFonts.raleway(
+                              fontSize: 20,
+                              fontWeight: FontWeight.bold,
+                            ),
+                          ),
+                        )),
+                    const SizedBox(height: 12),
+                    ElevatedButton(
+                        onPressed: () {
+                          _launchURL("https://www.niedersachsen.de/Coronavirus");
+                        },
+                        child: Align(
+                          alignment: Alignment.center,
+                          child: Text(
+                            "Aktuelle Coronaverordnung",
+                            style: GoogleFonts.raleway(
+                              fontSize: 20,
+                              fontWeight: FontWeight.bold,
+                            ),
+                          ),
+                        )),
+                    const SizedBox(height: 12),
                     ElevatedButton(
                         onPressed: () {
                           _launchURL("https://www.gvh.de/#/");
@@ -86,11 +116,11 @@ class _AboutHannoverState extends State<AboutHannover> {
                             ),
                           ),
                         )),
-                    const SizedBox(height: 24),
+                    const SizedBox(height: 12),
                     ElevatedButton(
                         onPressed: () {
                           _launchURL(
-                              "https://stadtleben.de/hannover/guide/bars/");
+                              "https://www.reisereporter.de/artikel/727-sechs-orte-der-bar-kultur-in-hannover");
                         },
                         child: Align(
                           alignment: Alignment.center,
@@ -102,7 +132,7 @@ class _AboutHannoverState extends State<AboutHannover> {
                             ),
                           ),
                         )),
-                    const SizedBox(height: 24),
+                    const SizedBox(height: 12),
                     ElevatedButton(
                         onPressed: () {
                           _launchURL(
