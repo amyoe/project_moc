@@ -1,10 +1,12 @@
 import 'package:flutter/material.dart';
 import 'package:firebase_core/firebase_core.dart';
 import 'package:google_fonts/google_fonts.dart';
+import 'package:project_moc/layout/notes/list_view.dart';
 import 'package:project_moc/services/auth.dart';
 import 'package:project_moc/services/wrapper.dart';
+import 'package:project_moc/storage/data.dart';
 import 'package:provider/provider.dart';
-import 'package:flutter_native_splash/flutter_native_splash.dart';
+//import 'package:flutter_native_splash/flutter_native_splash.dart';
 import 'layout/login.dart';
 import 'layout/register.dart';
 
@@ -20,12 +22,11 @@ class MyApp extends StatelessWidget {
   // This widget is the root of your application.
   @override
   Widget build(BuildContext context) {
-    const appTitle = 'Dein Ersti-Buddy';
-
 
     return MultiProvider(
         providers: [
           Provider<AuthService>(create: (_) => AuthService(),),
+          ChangeNotifierProvider(create: (context) => Data()),
         ],
         child: MaterialApp(
           title: "Dein Ersti-Buddy",

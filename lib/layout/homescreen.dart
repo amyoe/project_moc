@@ -3,6 +3,8 @@ import 'package:google_fonts/google_fonts.dart';
 import 'package:project_moc/layout/Compliance/compliance_schulungen.dart';
 import 'package:project_moc/layout/about_hannover.dart';
 import 'package:project_moc/layout/links.dart';
+import 'package:project_moc/layout/notes/list_view.dart';
+import 'package:project_moc/layout/notes/welcome_notes.dart';
 import 'package:project_moc/layout/profil.dart';
 import 'package:project_moc/layout/settings.dart';
 import 'package:project_moc/layout/widget.dart';
@@ -24,7 +26,7 @@ class HomeScreen extends StatelessWidget {
         decoration: const BoxDecoration(
             image: DecorationImage(
                 image: AssetImage("assets/images/study_buddy.png"),
-                fit: BoxFit.fitHeight)),
+                fit: BoxFit.contain)),
         child: Center(
           child: Column(
             crossAxisAlignment: CrossAxisAlignment.center,
@@ -66,6 +68,20 @@ class HomeScreen extends StatelessWidget {
                   );
                 },
                 child: Text("Rund um Hannover",
+                    style: GoogleFonts.raleway(fontSize: 18)),
+              ),
+              const SizedBox(
+                height: 12,
+              ),
+              ElevatedButton(
+                onPressed: () {
+                  Navigator.push(
+                    context,
+                    MaterialPageRoute(
+                        builder: (context) => WelcomeNotes()),
+                  );
+                },
+                child: Text("Notizen",
                     style: GoogleFonts.raleway(fontSize: 18)),
               ),
             const Spacer(),

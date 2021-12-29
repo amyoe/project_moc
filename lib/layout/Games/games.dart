@@ -19,16 +19,18 @@ class _GamesChoiceSate extends State<GamesChoice> {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: customAppBar("Spiele"),
-      body: Container(decoration: const BoxDecoration(
-          image: DecorationImage(
-              image: AssetImage("assets/images/wuerfel.png"),
-              fit: BoxFit.fitWidth)),
+      body: Container(
+        decoration: const BoxDecoration(
+            image: DecorationImage(
+                image: AssetImage("assets/images/wuerfel.png"),
+                fit: BoxFit.fitWidth)),
         child: Center(
           child: Padding(
             padding: const EdgeInsets.all(10.0),
             child: Column(
               mainAxisAlignment: MainAxisAlignment.center,
               children: [
+                const Spacer(),
                 ElevatedButton(
                   onPressed: () {
                     Navigator.push(
@@ -40,9 +42,7 @@ class _GamesChoiceSate extends State<GamesChoice> {
                   child: Text("Quiz Duell",
                       style: GoogleFonts.raleway(fontSize: 20)),
                 ),
-                const SizedBox(
-                  height: 24,
-                ),
+                const Spacer(),
                 ElevatedButton(
                   onPressed: () {
                     Navigator.push(
@@ -53,9 +53,7 @@ class _GamesChoiceSate extends State<GamesChoice> {
                   child:
                       Text("Memorie", style: GoogleFonts.raleway(fontSize: 20)),
                 ),
-                const SizedBox(
-                  height: 24,
-                ),
+                const Spacer(),
                 ElevatedButton(
                   onPressed: () {
                     Navigator.push(
@@ -66,18 +64,18 @@ class _GamesChoiceSate extends State<GamesChoice> {
                   child: Text("Tic Tac Toe",
                       style: GoogleFonts.raleway(fontSize: 20)),
                 ),
-                const SizedBox(
-                  height: 24,
-                ),
-                 ElevatedButton(
+                const Spacer(),
+                ElevatedButton(
                   onPressed: () {
                     Navigator.push(
                       context,
                       MaterialPageRoute(builder: (context) => Quizzler()),
                     );
                   },
-                  child: Text("True or False",style: GoogleFonts.raleway(fontSize: 20)),
+                  child: Text("True or False",
+                      style: GoogleFonts.raleway(fontSize: 20)),
                 ),
+                const Spacer(),
               ],
             ),
           ),
