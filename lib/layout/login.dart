@@ -1,6 +1,7 @@
 //Amy Oevermann
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
+import 'package:project_moc/layout/reset_password.dart';
 import 'package:project_moc/layout/widget.dart';
 import 'package:project_moc/services/auth.dart';
 import 'package:provider/provider.dart';
@@ -18,7 +19,7 @@ class LoginScreen extends StatelessWidget {
     final TextEditingController passwordController = TextEditingController();
     final authService = Provider.of<AuthService>(context);
     final auth = FirebaseAuth.instance;
-    //String email = email;
+    String email = "";
 
     return Scaffold(
       appBar: customAppBar("Login"),
@@ -73,8 +74,12 @@ class LoginScreen extends StatelessWidget {
           ),
           TextButton(
             onPressed: () {
-             // auth.sendPasswordResetEmail(email: email);
-              Navigator.of(context).pop;
+             //auth.sendPasswordResetEmail(email: email);
+             // Navigator.of(context).pop;
+              Navigator.push(
+                context,
+                MaterialPageRoute(builder: (context) => ResetScreen()),
+              );
             },
             child: const Text("Passwort zurücksetzen"),
           ),

@@ -18,7 +18,6 @@ class QuizDuellCompany extends StatefulWidget{
 
 class _QuizDuellCompanySate extends State<QuizDuellCompany> {
 
-  //late verwenden, da ich es nicht jetzt initalisiere, sondern später
   int currentLevel = 1;
   int userPoints = 0;
   late QuizCompanyModel currentQuestion;
