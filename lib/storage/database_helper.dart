@@ -1,6 +1,7 @@
 // Franziska Petzold
 import 'package:flutter/material.dart';
 import 'package:project_moc/model/notiz_model.dart';
+import 'package:project_moc/model/user.dart';
 import 'package:sqflite/sqflite.dart';
 import 'package:path/path.dart';
 
@@ -11,6 +12,8 @@ class NoteDBHelper {
   static Database? _database;
   static const _databaseName = 'note.db';
   static const _tableName = 'note';
+  static const _databaseName2 = 'ourUser.db';
+  static const _tableName2 = 'ourUser';
 
   Future<Database?> get noteDatabase async {
     if (_database != null) return _database;

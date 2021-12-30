@@ -32,7 +32,7 @@ class _ProfilScreenState extends State<ProfilScreen> {
                     width: 125,
                     height: 125,
                   ),
-                  SizedBox(height: 24),
+                  const SizedBox(height: 24),
                   TextFormField(
                     style: GoogleFonts.raleway(fontSize: 16),
                     keyboardType: TextInputType.text,
@@ -48,7 +48,7 @@ class _ProfilScreenState extends State<ProfilScreen> {
                       return null;
                     },
                   ),
-                  SizedBox(height: 12),
+                  const SizedBox(height: 12),
                   TextFormField(
                     style: GoogleFonts.raleway(fontSize: 16),
                     keyboardType: TextInputType.datetime,
@@ -58,7 +58,7 @@ class _ProfilScreenState extends State<ProfilScreen> {
                       border: OutlineInputBorder(),
                     ),
                   ),
-                  SizedBox(height: 12),
+                  const SizedBox(height: 12),
                   TextFormField(
                     style: GoogleFonts.raleway(fontSize: 16),
                     keyboardType: TextInputType.emailAddress,
@@ -67,7 +67,7 @@ class _ProfilScreenState extends State<ProfilScreen> {
                       border: OutlineInputBorder(),
                     ),
                   ),
-                  SizedBox(height: 12),
+                  const SizedBox(height: 12),
                   TextFormField(
                     style: GoogleFonts.raleway(fontSize: 16),
                     obscureText: true,
@@ -76,7 +76,7 @@ class _ProfilScreenState extends State<ProfilScreen> {
                       border: OutlineInputBorder(),
                     ),
                   ),
-                  SizedBox(height: 12),
+                  const SizedBox(height: 12),
                   TextFormField(
                     style: GoogleFonts.raleway(fontSize: 16),
                     maxLines: 5,
