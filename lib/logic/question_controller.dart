@@ -24,7 +24,7 @@ int getCorrectAnswerIndex(List<String> answers, String correctAnswer){
   return -1;
 }
 
-//Company Fragen
+//Wirtschaftinformatik Fragen
 List<String> getQuestionCompanyRandomList(List<String> companyWrongAnswers, String companyCorrectAnswer) {
   companyWrongAnswers.add(companyCorrectAnswer);
   companyWrongAnswers.shuffle();

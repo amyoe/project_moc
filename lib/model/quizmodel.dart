@@ -1,5 +1,5 @@
 //Amy Oevermann
-// Klasse, in der die Fragen angezeigt werden
+// Klasse, in der die Allgemeinen Fragen angezeigt werden
 class QuizModel {
   String question;
   String correctAnswer;
@@ -8,7 +8,7 @@ class QuizModel {
   QuizModel(this.question, this.correctAnswer, this.wrongAnswers);
 }
 
-//Klasse für die Hochschul Fragen
+//Klasse für die Wirtschaftinformatik Fragen
 class QuizCompanyModel {
   String companyQuestion;
   String companyCorrectAnswer;

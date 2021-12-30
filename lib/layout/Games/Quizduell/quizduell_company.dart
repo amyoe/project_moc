@@ -1,4 +1,5 @@
 //Amy Oevermann
+//Quiz Fragen und Antworten für die Kategorie Wirtschaftinformatik
 import 'package:google_fonts/google_fonts.dart';
 import 'package:project_moc/logic/question_controller.dart';
 import 'package:project_moc/logic/questions.dart';

@@ -1,4 +1,5 @@
 //Amy Oevermann
+//Auswahl einer Quizduell Kategorie
 import 'package:google_fonts/google_fonts.dart';
 import 'package:project_moc/layout/Games/Quizduell/quizduell.dart';
 import 'package:project_moc/layout/Games/Quizduell/quizduell_company.dart';
@@ -19,8 +20,15 @@ class QuizDuellChoice extends StatelessWidget{
               mainAxisAlignment: MainAxisAlignment.center,
               children: [
                 Spacer(),
-                Text("Wähle eine Kategorie aus",
+                Text("Lerne die Hochschule Hannover besser kennen.",
                   style: GoogleFonts.raleway(fontSize: 20),
+                  textAlign: TextAlign.center,
+                ),
+                Padding(
+                  padding: const EdgeInsets.only(top: 20.0),
+                  child: Text("Wähle eine Kategorie zum spielen aus",
+                    style: GoogleFonts.raleway(fontSize: 20),
+                  ),
                 ),
                 Padding(
                   padding: const EdgeInsets.only(top: 30.0),

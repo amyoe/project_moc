@@ -1,7 +1,7 @@
 //Amy Oevermann
 // Funktion für die Fragen
 // Das Model besteht aus Frage, richtiger Antwort und falscher Antwort
-// So muss das auch hier dem Model übergeben werden
+// Diese Reihenfolge muss in der Funktion bestehen bleiben
 import 'package:project_moc/model/quizmodel.dart';
 
 QuizModel loadQuestion(int questionIndex){

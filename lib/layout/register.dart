@@ -1,4 +1,5 @@
 //Amy Oevermann
+//Registrierung der User
 import 'package:flutter/material.dart';
 import 'package:project_moc/layout/widget.dart';
 import 'package:project_moc/services/auth.dart';
@@ -63,7 +64,7 @@ class RegisterScreen extends StatelessWidget {
               );
               Navigator.pop(context);
             },
-            child: Text("Registieren"),
+            child: Text("Registrieren"),
           ),
         ],
       ),

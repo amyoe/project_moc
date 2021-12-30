@@ -1,4 +1,5 @@
 //Amy Oevermann
+// User Login
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
 import 'package:project_moc/layout/reset_password.dart';
@@ -70,7 +71,7 @@ class LoginScreen extends StatelessWidget {
             onPressed: () {
               Navigator.pushNamed(context, '/register');
             },
-            child: const Text("Registieren"),
+            child: const Text("Registrieren"),
           ),
           TextButton(
             onPressed: () {

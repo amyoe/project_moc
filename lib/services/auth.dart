@@ -1,4 +1,4 @@
-import 'package:firebase_auth/firebase_auth.dart';
+//Amy Oevermann
 import 'package:firebase_auth/firebase_auth.dart' as auth;
 import 'package:project_moc/model/user.dart';
 import 'package:firebase_core/firebase_core.dart';
@@ -48,6 +48,11 @@ class AuthService {
   // Abmelden
   Future<void> signOut() async {
     return await _firebaseAuth.signOut();
+  }
+
+  //E-Mail Reset
+  Future<void> resetPassword(String email) async {
+    await _firebaseAuth.sendPasswordResetEmail(email: email);
   }
 
 // User Objekt auf Basis von Firebase

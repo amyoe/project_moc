@@ -1,8 +1,10 @@
 //Amy Oevermann
+//Screen zum Passwort Reset, E-Mail Adresse muss eingegeben werden,
+//dann wird eine E-Mail zum Reset gesendet
+import 'package:firebase_auth/firebase_auth.dart';
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
 import 'package:project_moc/layout/widget.dart';
-import 'package:firebase_auth/firebase_auth.dart';
 import 'package:flutter/cupertino.dart';
 
 class ResetScreen extends StatefulWidget {
@@ -17,7 +19,6 @@ class _ResetScreenState extends State<ResetScreen> {
   Widget build(BuildContext context) {
     final TextEditingController emailController = TextEditingController();
     String email = this.email;
-
     final auth = FirebaseAuth.instance;
 
     return Scaffold(

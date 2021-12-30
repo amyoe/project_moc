@@ -1,6 +1,5 @@
 //Amy Oevermann
 import 'package:google_fonts/google_fonts.dart';
-import 'package:project_moc/layout/Compliance/compliance_schulungen.dart';
 import 'package:project_moc/layout/Notizen/note_detail.dart';
 import 'package:project_moc/layout/Notizen/note_screen.dart';
 import 'package:project_moc/layout/about_hannover.dart';
@@ -31,7 +30,7 @@ class HomeScreen extends StatelessWidget {
           child: Column(
             crossAxisAlignment: CrossAxisAlignment.center,
             children: [
-              MyStatefulWidget(),
+              MyStartScreen(),
               Spacer(),
               ElevatedButton(
                 onPressed: () {
@@ -103,14 +102,14 @@ class HomeScreen extends StatelessWidget {
   }
 }
 
-class MyStatefulWidget extends StatefulWidget {
-  const MyStatefulWidget({Key? key}) : super(key: key);
+class MyStartScreen extends StatefulWidget {
+  const MyStartScreen({Key? key}) : super(key: key);
 
   @override
-  State<MyStatefulWidget> createState() => _MyStatefulWidgetState();
+  State<MyStartScreen> createState() => _MyStartScreenState();
 }
 
-class _MyStatefulWidgetState extends State<MyStatefulWidget> {
+class _MyStartScreenState extends State<MyStartScreen> {
   @override
   Widget build(BuildContext context) {
     return Padding(

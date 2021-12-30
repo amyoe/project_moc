@@ -12,15 +12,12 @@ class OurUser {
   final String? email;
 
   //final String profileImage;
-  //final String nachname;
   //final bool isProfilhidden;
-  //final bool isDarkMode;
   //int Alter;
-  //String orgaPosition;
 
   OurUser(this.uid,
      // this.name,
-      this.email,
+      this.email,);
      // this.bio);
 
 // Vorbereitung für User-Datenbank
